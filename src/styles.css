@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap');
+
+:root {
+    --colorPrincipal: #33637e;
+    --colorSecundario: #f4fcfc;
+    --fuenteSecundaria: 'Poppins', sans-serif;
+}
+
 html,
 body {
     height: 100%;

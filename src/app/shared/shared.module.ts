@@ -21,8 +21,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
     declarations: [RecursoInexistenteComponent],
-    imports: [CommonModule],
     exports: [
+        CommonModule,
         MatAutocompleteModule,
         MatButtonModule,
         MatCardModule,

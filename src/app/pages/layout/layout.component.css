@@ -1,0 +1,110 @@
+/* Estilos del toolbar */
+.layout-toolbar {
+    background-color: var(--colorSecundario);
+    color: var(--colorPrincipal);
+    font-family: var(--fuenteSecundaria);
+    border-bottom: 2px solid var(--colorPrincipal);
+    height: 50px;
+
+    .espaciado {
+        flex: 1 1 auto;
+    }
+
+    /* Estilo de los botones del toolbar */
+    .mat-mdc-button {
+        font-family: var(--fuenteSecundaria);
+        margin-left: 2%;
+
+        &::before {
+            content: '';
+            display: none;
+            position: absolute;
+            bottom: 1px;
+            left: 50%;
+            width: 17px;
+            height: 4px;
+            transform: translateX(-50%);
+            background-color: var(--colorPrincipal);
+            border-radius: 5px;
+        }
+
+        &:hover {
+            &::before {
+                display: block;
+            }
+        }
+
+        &.active {
+            &::before {
+                display: block;
+            }
+        }
+    }
+
+    /* Toggle del toolbar */
+    .toggleButton {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        overflow: hidden;
+        background: var(--colorPrincipal);
+        border-radius: 4px;
+    }
+
+    .toggleButton span {
+        position: absolute;
+        width: 26px;
+        height: 3px;
+        background: var(--colorSecundario);
+        border-radius: 4px;
+        transition: 0.5s;
+    }
+
+    /* Primera rallita del toggle */
+    .toggleButton span:nth-child(1) {
+        transform: translateY(-9px);
+        width: 18px;
+        left: 2px;
+    }
+
+    /* Al pasar el ratón, alargo la ralla */
+    .toggleButton:hover span:nth-child(1) {
+        width: 26px;
+    }
+
+    /* Cuando haga clic, rotará 45 grados */
+    .toggleButton.active span:nth-child(1) {
+        width: 26px;
+        transform: translateY(0px) rotate(45deg);
+    }
+
+    /* Tercera rallita del toggle */
+    .toggleButton span:nth-child(2) {
+        transform: translateY(9px);
+        width: 18px;
+        left: 2px;
+    }
+
+    /* Al pasar el ratón, alargo la ralla */
+    .toggleButton:hover span:nth-child(2) {
+        width: 26px;
+    }
+
+    /* Cuando haga clic, rotará 45 grados */
+    .toggleButton.active span:nth-child(2) {
+        width: 26px;
+        transform: translateY(0px) rotate(-45deg);
+    }
+
+    /* Segunda rallita del toggle */
+    /* Cuando hago clic, desaparece la ralla hacia la derecha */
+    .toggleButton.active span:nth-child(3) {
+        transform: translateX(60px);
+    }
+}
+
+/* --------------------------- */
