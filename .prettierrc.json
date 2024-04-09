@@ -1,0 +1,9 @@
+{
+    "printWidth": 175,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "arrowParens": "always",
+    "trailingComma": "none",
+    "htmlWhitespaceSensitivity": "css",
+    "semi": true
+}
