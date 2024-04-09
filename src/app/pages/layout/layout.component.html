@@ -1,5 +1,31 @@
-<h1>Layout header</h1>
+<!-- Toolbar -->
+<mat-toolbar #toolbar class="layout-toolbar" fullscreen>
+    <span>Héroes App</span>
+    <span class="espaciado"></span>
 
-<router-outlet></router-outlet>
+    <!-- Template que muestra los botones cuando la pantalla está por encima de 680px -->
+    <ng-container *ngIf="showToolbarButtons; else showToggle">
+        <button mat-button class="btnListado" (click)="switchActiveClass('btnListado')" [routerLink]="['/app/listado']">
+            <mat-icon aria-hidden="false" aria-label="Visualizar listado" fontIcon="list"></mat-icon><span>Listado de héroes</span>
+        </button>
+        <button mat-button class="btnBuscar" (click)="switchActiveClass('btnBuscar')" [routerLink]="['/app/busqueda']">
+            <mat-icon aria-hidden="false" aria-label="Búsqueda de héroe" fontIcon="search"></mat-icon><span>Buscar héroe</span>
+        </button>
+        <button mat-button class="btnNuevo" (click)="switchActiveClass('btnNuevo')" [routerLink]="['/app/nuevo-heroe']">
+            <mat-icon aria-hidden="false" aria-label="Inserción de héroe" fontIcon="add"></mat-icon><span>Añadir héroe</span>
+        </button>
+    </ng-container>
 
-<h2>Layout footer</h2>
+    <!-- Template que muestra el toggle cuando la pantalla está por debajo de 680px -->
+    <ng-template #showToggle>
+        <div class="toggleButton" (click)="switchToggleButton()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </ng-template>
+</mat-toolbar>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
