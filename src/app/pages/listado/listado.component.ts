@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ListadoService } from 'src/app/services/listado.service';
 import { Constants } from 'src/app/shared/models/constants.model';
+import { Heroe } from 'src/app/shared/models/heroe.model';
 
 @Component({
     selector: 'app-listado',
@@ -8,29 +10,25 @@ import { Constants } from 'src/app/shared/models/constants.model';
 })
 export class ListadoComponent implements OnInit {
     /* Propiedades del listado */
-    public numberCols: number = 6;
+    public listadoHeroes: Heroe[] = [];
 
-    /* Propiedades constantes */
-    public MEDIABREAKPOINTS = Object.freeze(Constants.mediaBreakpoints);
+    constructor(private listadoService: ListadoService) {}
 
     ngOnInit(): void {
-        this.checkNumberCols();
+        this.getHeroesList();
     }
 
-    /* Recupera el tamaño de la ventana para poder asignar el número de columnas que se muestran en pantalla para hacerla responsive */
-    checkNumberCols() {
-        let windowSize: number = window.innerWidth;
+    /* PUBLIC METHODS */
 
-        if (windowSize < this.MEDIABREAKPOINTS.sm) {
-            this.numberCols = 1;
-        } else if (windowSize < this.MEDIABREAKPOINTS.md) {
-            this.numberCols = 2;
-        } else if (windowSize < this.MEDIABREAKPOINTS.lg) {
-            this.numberCols = 3;
-        } else if (windowSize < this.MEDIABREAKPOINTS.xl) {
-            this.numberCols = 4;
-        } else {
-            this.numberCols = 6;
-        }
+    /* PRIVATE METHODS */
+    private getHeroesList() {
+        this.listadoService.obtenerListadoHeroes().subscribe({
+            next: (listado: Heroe[]) => {
+                this.listadoHeroes = listado;
+            },
+            error: (e: any) => {
+                alert('Error: ' + e.message);
+            }
+        });
     }
 }

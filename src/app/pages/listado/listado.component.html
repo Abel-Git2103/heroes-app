@@ -1,18 +1,51 @@
 <!-- Contenedor del título de la página -->
-<div class="custom-heading-container mb-3"><h2>Listado de héroes</h2></div>
+<div class="custom-heading-container mb-3"><h1>Listado de héroes</h1></div>
 
 <!-- Grid que muestra el listado de heroés ajustando número de columnas al cambiar tamaño de ventanta para que sea responsive -->
-<mat-grid-list [cols]="numberCols" rowHeight="1:2" gutterSize="10px" (window:resize)="checkNumberCols()">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-    <mat-grid-tile>5</mat-grid-tile>
-    <mat-grid-tile>6</mat-grid-tile>
-    <mat-grid-tile>7</mat-grid-tile>
-    <mat-grid-tile>8</mat-grid-tile>
-    <mat-grid-tile>9</mat-grid-tile>
-    <mat-grid-tile>10</mat-grid-tile>
-    <mat-grid-tile>11</mat-grid-tile>
-    <mat-grid-tile>12</mat-grid-tile>
-</mat-grid-list>
+<div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+    <ng-container *ngFor="let heroe of listadoHeroes">
+        <!-- Tarjeta de superheroe -->
+        <mat-card class="card-container" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(20%-10px)">
+            <!-- Header de la tarjeta -->
+            <mat-card-header>
+                <mat-card-title>{{ heroe.alias }}</mat-card-title>
+                <mat-card-subtitle class="card-subtitle">{{ heroe.nombre }}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-divider class="card-divider"></mat-divider>
+
+            <!-- Imagen de la tarjeta -->
+            <img mat-card-image class="card-image mt-3" src="{{ heroe.imagen }}" alt="Foto de superhéroe" />
+
+            <!-- Contenedor de poderes del héroe -->
+            <div class="powers-container mt-1">
+                <ng-container *ngFor="let poder of heroe.poderes">
+                    <mat-chip-listbox>
+                        <mat-chip>
+                            <span class="power-item">{{ poder }}</span>
+                        </mat-chip>
+                    </mat-chip-listbox>
+                </ng-container>
+            </div>
+
+            <!-- Contenedor de la historia del héroe -->
+            <mat-card-content class="my-3">
+                <p>
+                    {{ heroe.historia }}
+                </p>
+            </mat-card-content>
+
+            <mat-divider class="card-divider"></mat-divider>
+
+            <!-- Contenedor de los botones de la tarjeta -->
+            <mat-card-actions>
+                <button mat-raised-button color="primary" class="card-button-editar">
+                    <mat-icon aria-hidden="false" aria-label="Editar héroe" fontIcon="edit"></mat-icon><span>Editar</span>
+                </button>
+                <button mat-raised-button class="card-button">
+                    <mat-icon aria-hidden="false" aria-label="Eliminar héroe" fontIcon="delete"></mat-icon><span>Eliminar</span>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+</div>
