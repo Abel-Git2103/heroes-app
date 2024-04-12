@@ -1,0 +1,17 @@
+<!-- Contenedor del header del dialog -->
+<div class="dialog-header-container">
+    <h1 mat-dialog-title>Eliminación de héroe</h1>
+    <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+        <mat-icon class="close-icon" color="warn" fontIcon="close"></mat-icon>
+    </button>
+</div>
+
+<mat-divider></mat-divider>
+<!-- Contenedor del mensaje del dialog -->
+<mat-dialog-content>La acción eliminará al héroe de la base de datos.<br /><br />¿Desea realmente desea eliminar el héroe?</mat-dialog-content>
+
+<!-- Contenedor de los botones del dialog -->
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close><mat-icon aria-hidden="false" aria-label="Editar héroe" fontIcon="close"></mat-icon><span>No</span></button>
+    <button mat-button mat-dialog-close cdkFocusInitial><mat-icon aria-hidden="false" aria-label="Editar héroe" fontIcon="check"></mat-icon><span>Sí</span></button>
+</mat-dialog-actions>
