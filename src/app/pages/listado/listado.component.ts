@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogoConfirmacionComponent } from 'src/app/components/dialogo-confirmacion/dialogo-confirmacion.component';
 import { ListadoService } from 'src/app/services/listado.service';
-import { Constants } from 'src/app/shared/models/constants.model';
+import { LoadingService } from 'src/app/services/loading.service';
 import { Heroe } from 'src/app/shared/models/heroe.model';
 
 @Component({
@@ -14,7 +14,7 @@ export class ListadoComponent implements OnInit {
     /* Propiedades del listado */
     public listadoHeroes: Heroe[] = [];
 
-    constructor(private listadoService: ListadoService, private dialog: MatDialog) {}
+    constructor(private listadoService: ListadoService, private dialog: MatDialog, private loadingService: LoadingService) {}
 
     ngOnInit(): void {
         this.getHeroesList();
@@ -39,5 +39,13 @@ export class ListadoComponent implements OnInit {
                 alert('Error: ' + e.message);
             }
         });
+        /*         try {
+            this.loadingService.loadingOn();
+
+        } catch (error) {
+            alert('Error spinner: ' + error);
+        } finally {
+            this.loadingService.loadingOff();
+        } */
     }
 }
