@@ -1,0 +1,26 @@
+/* Estilos del dialog de confirmación */
+.dialog-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.close-button {
+    margin-right: 2px;
+}
+
+mat-divider {
+    background-color: var(--colorPrincipal);
+}
+
+.mat-mdc-dialog-actions {
+    justify-content: end;
+    margin-right: 10px;
+}
+
+/* --------------------------- */
