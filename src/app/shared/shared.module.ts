@@ -18,11 +18,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
     declarations: [RecursoInexistenteComponent],
     exports: [
         CommonModule,
+        HttpClientModule,
+        FlexLayoutModule,
         MatAutocompleteModule,
         MatButtonModule,
         MatCardModule,

@@ -1,16 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Constants } from 'src/app/shared/models/constants.model';
 
 @Component({
     selector: 'app-layout',
     templateUrl: './layout.component.html',
     styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit, AfterViewInit {
     /* Propiedades del toolbar */
     showToolbarButtons: boolean = true;
     lastElementActive: string = '';
     toggleFlag: boolean = false;
     showCollapsedToolbar: boolean = false;
+
+    /* Propiedades constantes */
+    public URLS = Object.freeze(Constants.appUrls);
+
+    constructor(private router: Router) {
+        this.checkUrl(router);
+    }
 
     ngOnInit(): void {
         this.checkSize();
@@ -32,6 +41,12 @@ export class LayoutComponent implements OnInit {
                 this.toggleFlag = true;
             }
         });
+    }
+
+    ngAfterViewInit(): void {
+        if (this.lastElementActive !== '') {
+            this.switchActiveClass(this.lastElementActive);
+        }
     }
 
     /* PUBLIC METHODS */
@@ -97,6 +112,25 @@ export class LayoutComponent implements OnInit {
             this.showToolbarButtons = true;
         } else {
             this.showToolbarButtons = false;
+        }
+    }
+
+    /* Verifica el path actual de la url, por si refresco la página en la que me encuentre no pierda el boton seleccionado del topbar */
+    private checkUrl(router: Router) {
+        let path: string = router.url || '';
+
+        switch (path) {
+            case this.URLS['listado']:
+                this.lastElementActive = 'btnListado';
+                break;
+            case this.URLS['busqueda']:
+                this.lastElementActive = 'btnBuscar';
+                break;
+            case this.URLS['nuevoHeroe']:
+                this.lastElementActive = 'btnNuevo';
+                break;
+            default:
+                break;
         }
     }
 }
