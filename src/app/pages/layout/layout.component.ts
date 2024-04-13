@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Constants } from 'src/app/shared/models/constants.model';
 
@@ -17,12 +17,12 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     /* Propiedades constantes */
     public URLS = Object.freeze(Constants.appUrls);
 
-    constructor(private router: Router) {
-        this.checkUrl(router);
-    }
+    /* Inyección de dependencias */
+    private _router: Router = inject(Router);
 
     ngOnInit(): void {
-        this.checkSize();
+        this._checkUrl(this._router);
+        this._checkSize();
 
         /* Evento que escucha cuando cambiamos el tamaño de la pantalla para mostrar u ocultar el toggle colapsando el toolbar */
         window.addEventListener('resize', () => {
@@ -112,10 +112,10 @@ export class LayoutComponent implements OnInit, AfterViewInit {
                 break;
         }
     }
-    
+
     /* PRIVATE METHODS */
     /* Verifica el tamaño de la pantalla para mostrar u ocultar los botones del toolbar y mostrar el toggle */
-    private checkSize() {
+    private _checkSize() {
         if (window.innerWidth > 680) {
             this.showCollapsedToolbar = false;
             this.showToolbarButtons = true;
@@ -125,7 +125,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     }
 
     /* Verifica el path actual de la url, por si refresco la página en la que me encuentre no pierda el boton seleccionado del topbar */
-    private checkUrl(router: Router) {
+    private _checkUrl(router: Router) {
         let path: string = router.url || '';
 
         switch (path) {

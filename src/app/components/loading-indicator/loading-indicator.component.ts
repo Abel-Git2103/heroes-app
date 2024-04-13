@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { RouteConfigLoadEnd, RouteConfigLoadStart, Router } from '@angular/router';
 import { delay, tap } from 'rxjs';
 import { LoadingService } from 'src/app/services/loading.service';
@@ -13,22 +13,24 @@ export class LoadingIndicatorComponent implements OnInit {
 
     public loading: boolean = false;
 
-    constructor(private _loadingService: LoadingService, private router: Router) {}
+    /* Inyección de dependencias */
+    private _loadingService: LoadingService = inject(LoadingService);
+    private _router: Router = inject(Router);
 
     ngOnInit() {
-        this.listenToLoading();
+        this._listenToLoading();
     }
 
     /* Recupera el estado del sppiner */
-    private listenToLoading() {
+    private _listenToLoading() {
         if (this.detectRouteTransitions) {
-            this.router.events
+            this._router.events
                 .pipe(
                     tap((event) => {
                         if (event instanceof RouteConfigLoadStart) {
-                            this._loadingService.setLoading(true, this.router.url);
+                            this._loadingService.setLoading(true, this._router.url);
                         } else if (event instanceof RouteConfigLoadEnd) {
-                            this._loadingService.setLoading(false, this.router.url);
+                            this._loadingService.setLoading(false, this._router.url);
                         }
                     })
                 )

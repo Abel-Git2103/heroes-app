@@ -1,31 +1,29 @@
 import { HttpContextToken, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable, finalize } from 'rxjs';
 import { LoadingService } from '../services/loading.service';
 
-export const SkipLoading = new HttpContextToken<boolean>(() => false);
+export const skipLoading = new HttpContextToken<boolean>(() => false);
 
 @Injectable()
 export class LoadingInterceptor implements HttpInterceptor {
-    constructor(private _loadingService: LoadingService) {}
+    private _loadingService: LoadingService = inject(LoadingService);
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        // Check for a custom attribute
-        // to avoid showing loading spinner
-        if (request.context.get(SkipLoading)) {
-            // Pass the request directly to the next handler
+        /* Si mando en el context de la petición el flag skipLoading, no lanzo el sppiner */
+        if (request.context.get(skipLoading)) {
             return next.handle(request);
         }
 
-        // Turn on the loading spinner
+        // Lanzo el sppiner service
         this._loadingService.setLoading(true, request.url);
 
         return next.handle(request).pipe(
             finalize(() => {
-                // Turn off the loading spinner
+                // Finalizo el sppiner service
                 setTimeout(() => {
                     this._loadingService.setLoading(false, request.url);
-                }, 1000);
+                }, 800);
             })
         );
     }
