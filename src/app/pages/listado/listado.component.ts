@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DialogoConfirmacionComponent } from 'src/app/components/dialogo-confirmacion/dialogo-confirmacion.component';
-import { ListadoService } from 'src/app/services/listado.service';
-import { LoadingService } from 'src/app/services/loading.service';
+import { Constants } from 'src/app/shared/models/constants.model';
 import { Heroe } from 'src/app/shared/models/heroe.model';
 
 @Component({
@@ -14,38 +14,34 @@ export class ListadoComponent implements OnInit {
     /* Propiedades del listado */
     public listadoHeroes: Heroe[] = [];
 
-    constructor(private listadoService: ListadoService, private dialog: MatDialog, private loadingService: LoadingService) {}
+    /* Propiedades constantes */
+    public URLS = Object.freeze(Constants.appUrls);
+
+    /* Inyección de dependencias */
+    private _route: ActivatedRoute = inject(ActivatedRoute);
+    private _router: Router = inject(Router);
+    private _dialog: MatDialog = inject(MatDialog);
 
     ngOnInit(): void {
-        this.getHeroesList();
+        this._getHeroesList();
     }
 
     /* PUBLIC METHODS */
     /* Al hacer click en el botón eliminar, se llama para abrir el diálogo de confirmación */
-    public confirmDialogDelete() {
-        this.dialog.open(DialogoConfirmacionComponent, {
+    confirmDialogDelete() {
+        this._dialog.open(DialogoConfirmacionComponent, {
             width: '450px'
         });
     }
 
-    /* PRIVATE METHODS */
-    /* Obtiene el listado de héroes del servicio */
-    private getHeroesList() {
-        this.listadoService.obtenerListadoHeroes().subscribe({
-            next: (listado: Heroe[]) => {
-                this.listadoHeroes = listado;
-            },
-            error: (e: any) => {
-                alert('Error: ' + e.message);
-            }
-        });
-        /*         try {
-            this.loadingService.loadingOn();
+    /* Navega a la página indicada */
+    navigateToEdit(id: string) {
+        this._router.navigate([this.URLS.editarHeroe, id]);
+    }
 
-        } catch (error) {
-            alert('Error spinner: ' + error);
-        } finally {
-            this.loadingService.loadingOff();
-        } */
+    /* PRIVATE METHODS */
+    /* Obtiene el listado de héroes del resolver */
+    private _getHeroesList() {
+        this.listadoHeroes = this._route.snapshot.data['listadoData'];
     }
 }

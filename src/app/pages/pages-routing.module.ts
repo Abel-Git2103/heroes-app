@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from './layout/layout.component';
+import { globalResolver } from '../resolvers/global.resolver';
 import { BusquedaComponent } from './busqueda/busqueda.component';
-import { NuevoHeroeComponent } from './nuevo-heroe/nuevo-heroe.component';
 import { EditarHeroeComponent } from './editar-heroe/editar-heroe.component';
-import { ListadoComponent } from './listado/listado.component';
 import { HeroeComponent } from './heroe/heroe.component';
+import { LayoutComponent } from './layout/layout.component';
+import { ListadoComponent } from './listado/listado.component';
+import { NuevoHeroeComponent } from './nuevo-heroe/nuevo-heroe.component';
 
 const routes: Routes = [
     {
@@ -14,7 +15,8 @@ const routes: Routes = [
         children: [
             {
                 path: 'busqueda',
-                component: BusquedaComponent
+                component: BusquedaComponent,
+                resolve: { busquedaData: globalResolver }
             },
             {
                 path: 'nuevo-heroe',
@@ -26,7 +28,8 @@ const routes: Routes = [
             },
             {
                 path: 'listado',
-                component: ListadoComponent
+                component: ListadoComponent,
+                resolve: { listadoData: globalResolver }
             },
             {
                 path: 'heroe/:id',
