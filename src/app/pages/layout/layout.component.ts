@@ -91,7 +91,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
                 }
                 break;
             case 'btnNuevo':
-                if (!btnBuscar?.classList.contains('active')) {
+                if (!btnNuevo?.classList.contains('active')) {
                     btnListado?.classList.remove('active');
                     btnBuscar?.classList.remove('active');
                     btnNuevo?.classList.toggle('active');
