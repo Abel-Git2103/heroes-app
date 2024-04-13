@@ -1,1 +1,19 @@
-<p>busqueda works!</p>
+<!-- Contenedor del título de la página -->
+<div class="custom-heading-container mb-3"><h1>Búsqueda de héroes</h1></div>
+
+<div class="form-container">
+    <!-- Formulario de búsqueda de héroe -->
+    <form class="search-form">
+        <mat-form-field class="form-full-width">
+            <mat-label>Alias del héroe</mat-label>
+            <input type="text" aria-label="Buscador de héroe" matInput [formControl]="inputSearchControl" autocomplete="off" [matAutocomplete]="auto" />
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let alias of filteredOptions | async" [value]="alias">
+                    {{ alias }}
+                </mat-option>
+                <mat-option value="" *ngIf="!filterData"> Sin resultados con la búsqueda {{ inputSearchControl.value }} </mat-option>
+            </mat-autocomplete>
+            <mat-error *ngIf="inputSearchControl.hasError('required')"> Debe ingresar un alias de héroe </mat-error>
+        </mat-form-field>
+    </form>
+</div>

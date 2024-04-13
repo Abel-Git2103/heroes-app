@@ -69,41 +69,50 @@ export class LayoutComponent implements OnInit, AfterViewInit {
 
         switch (elementoSeleccionado) {
             case 'btnListado':
-                btnListado?.classList.toggle('active');
-                btnBuscar?.classList.remove('active');
-                btnNuevo?.classList.remove('active');
-                toggleButton?.classList.remove('active');
+                if (!btnListado?.classList.contains('active')) {
+                    btnListado?.classList.toggle('active');
+                    btnBuscar?.classList.remove('active');
+                    btnNuevo?.classList.remove('active');
+                    toggleButton?.classList.remove('active');
 
-                this.lastElementActive = elementoSeleccionado;
-                this.showCollapsedToolbar = false;
+                    this.lastElementActive = elementoSeleccionado;
+                    this.showCollapsedToolbar = false;
+                }
                 break;
             case 'btnBuscar':
-                btnListado?.classList.remove('active');
-                btnBuscar?.classList.toggle('active');
-                btnNuevo?.classList.remove('active');
-                toggleButton?.classList.remove('active');
+                if (!btnBuscar?.classList.contains('active')) {
+                    btnListado?.classList.remove('active');
+                    btnBuscar?.classList.toggle('active');
+                    btnNuevo?.classList.remove('active');
+                    toggleButton?.classList.remove('active');
 
-                this.lastElementActive = elementoSeleccionado;
-                this.showCollapsedToolbar = false;
+                    this.lastElementActive = elementoSeleccionado;
+                    this.showCollapsedToolbar = false;
+                }
                 break;
             case 'btnNuevo':
-                btnListado?.classList.remove('active');
-                btnBuscar?.classList.remove('active');
-                btnNuevo?.classList.toggle('active');
-                toggleButton?.classList.remove('active');
+                if (!btnBuscar?.classList.contains('active')) {
+                    btnListado?.classList.remove('active');
+                    btnBuscar?.classList.remove('active');
+                    btnNuevo?.classList.toggle('active');
+                    toggleButton?.classList.remove('active');
 
-                this.lastElementActive = elementoSeleccionado;
-                this.showCollapsedToolbar = false;
+                    this.lastElementActive = elementoSeleccionado;
+                    this.showCollapsedToolbar = false;
+                }
                 break;
             default:
                 btnListado?.classList.remove('active');
                 btnBuscar?.classList.remove('active');
                 btnNuevo?.classList.remove('active');
                 toggleButton?.classList.remove('active');
+
+                this.lastElementActive = '';
+                this.showCollapsedToolbar = false;
                 break;
         }
     }
-
+    
     /* PRIVATE METHODS */
     /* Verifica el tamaño de la pantalla para mostrar u ocultar los botones del toolbar y mostrar el toggle */
     private checkSize() {
@@ -130,6 +139,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
                 this.lastElementActive = 'btnNuevo';
                 break;
             default:
+                this.lastElementActive = '';
                 break;
         }
     }

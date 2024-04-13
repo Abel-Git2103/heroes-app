@@ -8,8 +8,6 @@ export class LoadingService {
     loadingSub: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
     loadingMap: Map<string, boolean> = new Map<string, boolean>();
 
-    constructor() {}
-
     /* Transmite si ha de cargar el sppiner o no */
     setLoading(loading: boolean, url: string): void {
         if (!url) {

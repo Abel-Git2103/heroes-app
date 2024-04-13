@@ -1,28 +1,4 @@
 /* Estilos del listado de héroes */
-.custom-heading-container {
-    display: flex;
-    justify-content: center;
-}
-
-.custom-heading-container h1 {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #000;
-    position: relative;
-}
-
-.custom-heading-container h1::before {
-    content: '';
-    position: absolute;
-    bottom: -7px;
-    left: 50%;
-    width: 50px;
-    height: 7px;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background-color: var(--colorPrincipal);
-    border-radius: 15px;
-}
 
 /* Estilos de las tarjetas */
 mat-card {

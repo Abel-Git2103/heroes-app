@@ -5,6 +5,7 @@ import { RecursoInexistenteComponent } from './recurso-inexistente/recurso-inexi
 /* Módulos Angular material */
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -27,6 +28,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
         CommonModule,
         HttpClientModule,
         FlexLayoutModule,
+        FormsModule,
+        ReactiveFormsModule,
         MatAutocompleteModule,
         MatButtonModule,
         MatCardModule,
