@@ -4,14 +4,12 @@ import { PagesRoutingModule } from './pages-routing.module';
 
 import { ComponentsModule } from '../components/components.module';
 import { BusquedaComponent } from './busqueda/busqueda.component';
-import { EditarHeroeComponent } from './editar-heroe/editar-heroe.component';
 import { HeroeComponent } from './heroe/heroe.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ListadoComponent } from './listado/listado.component';
-import { NuevoHeroeComponent } from './nuevo-heroe/nuevo-heroe.component';
 
 @NgModule({
-    declarations: [LayoutComponent, BusquedaComponent, NuevoHeroeComponent, EditarHeroeComponent, ListadoComponent, HeroeComponent],
+    declarations: [LayoutComponent, BusquedaComponent, ListadoComponent, HeroeComponent],
     imports: [SharedModule, ComponentsModule, PagesRoutingModule],
     providers: []
 })

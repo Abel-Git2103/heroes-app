@@ -1,9 +1,9 @@
-import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { NgTemplateOutlet } from '@angular/common';
 import { AfterContentChecked, Component, OnInit, TemplateRef, ViewChild, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { ClaveValor, Constants } from 'src/app/shared/models/constants.model';
@@ -22,8 +22,8 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
     private _route: ActivatedRoute = inject(ActivatedRoute);
     private _router: Router = inject(Router);
     private _formBuilder: FormBuilder = inject(FormBuilder);
-    private announcer: LiveAnnouncer = inject(LiveAnnouncer);
-    private heroeService: HeroesService = inject(HeroesService);
+    private _heroesService: HeroesService = inject(HeroesService);
+    private _snackBar: MatSnackBar = inject(MatSnackBar);
 
     /* Propiedades constantes */
     public PAGEMODES = Object.freeze(Constants.pageHeroMode);
@@ -65,8 +65,8 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
 
         // Añadimos el poder al array
         if (value) {
-            /* Capitalizamos la primera letra */
-            value = value.charAt(0).toUpperCase() + value.slice(1);
+            /* Capitalizamos la primera letra y las demás en minúsculas */
+            value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
 
             this.heroe.poderes.push(value);
         }
@@ -85,8 +85,6 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
 
         if (index >= 0) {
             this.heroe.poderes.splice(index, 1);
-
-            this.announcer.announce(`Se ha eliminado el poder: ${poder}`);
         }
 
         /* Valido si el array de poderes tiene datos para mostrar u ocultar el error required */
@@ -97,23 +95,25 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
     guardarHeroe() {
         if (this.heroeForm.invalid) return;
 
-        if (this.modePage.clave === this.PAGEMODES[2]['clave']) {
-            this.heroeActual.id = this.heroeActual.alias.toLowerCase();
+        this.ajustarGramatica();
 
-            this.heroeService.insertarHeroe(this.heroeActual).subscribe({
+        if (this.modePage.clave === this.PAGEMODES[2]['clave']) {
+            this._heroesService.insertarHeroe(this.heroeActual).subscribe({
                 next: (heroeInsertado: Heroe) => {
                     this.heroe = heroeInsertado;
                     this._router.navigate([this.URLS.listado]);
+                    this._snackBar.open('Héroe insertado correctamente', 'Cerrar');
                 },
-                error: (e: any) => {
-                    console.log(e);
+                error: () => {
+                    this._snackBar.open('Se ha producido un error al insertar el héroe', 'Cerrar');
                 }
             });
         } else {
-            this.heroeService.modificarHeroe(this.heroeActual).subscribe({
+            this._heroesService.modificarHeroe(this.heroeActual).subscribe({
                 next: (heroeModificado: Heroe) => {
                     this.heroe = heroeModificado;
                     this._router.navigate([this.URLS.listado]);
+                    this._snackBar.open('Se ha producido un error al modificar el héroe', 'Cerrar');
                 },
                 error: (e: any) => {
                     console.log(e);
@@ -138,7 +138,7 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
         this.heroeForm = this._formBuilder.group({
             id: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.id],
             nombre: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.nombre, Validators.required],
-            alias: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.alias, Validators.required],
+            alias: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.alias.toUpperCase(), Validators.required],
             historia: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.historia, Validators.required],
             poderes: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.poderes, Validators.required],
             imagen: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.imagen, Validators.required]
@@ -153,6 +153,15 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
             return this.edicionTemplate;
         } else {
             return this.selectedTemplate;
+        }
+    }
+
+    /* Corregimos la gramatica de los inputs antes de guardarlos */
+    private ajustarGramatica() {
+        if (this.heroeActual) {
+            this.heroeActual.id = this.heroeActual.alias.toLowerCase().replace(/\s/g, '-');
+            this.heroeActual.nombre = this.heroeActual.nombre.charAt(0).toUpperCase() + this.heroeActual.nombre.slice(1).toLowerCase();
+            this.heroeActual.alias = this.heroeActual.alias.charAt(0).toUpperCase() + this.heroeActual.alias.slice(1).toLowerCase();
         }
     }
 }

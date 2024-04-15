@@ -1,4 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { Constants } from 'src/app/shared/models/constants.model';
@@ -21,6 +22,7 @@ export class ListadoComponent implements OnInit {
     private _router: Router = inject(Router);
 
     private _heroesService: HeroesService = inject(HeroesService);
+    private _snackBar: MatSnackBar = inject(MatSnackBar);
 
     ngOnInit(): void {
         this._getHeroesList();
@@ -38,8 +40,8 @@ export class ListadoComponent implements OnInit {
             next: (listadoHeroes: Heroe[]) => {
                 this.listadoHeroes = listadoHeroes;
             },
-            error: (e: any) => {
-                console.log(e);
+            error: () => {
+                this._snackBar.open('Se ha producido un error al actualizar el listado', 'Cerrar');
             }
         });
     }
