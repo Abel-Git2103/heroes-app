@@ -30,7 +30,7 @@
                 <!-- Input de alias del héroe -->
                 <mat-form-field class="col-12">
                     <mat-label>Alias del héroe</mat-label>
-                    <input type="text" aria-label="Alias del héroe" matInput formControlName="alias" autocomplete="off" required />
+                    <input type="text" aria-label="Alias del héroe" matInput appUpperCase formControlName="alias" autocomplete="off" required />
                     <mat-error *ngIf="heroeForm.get('alias')?.hasError('required')"> Debe ingresar el alias del héroe </mat-error>
                 </mat-form-field>
 

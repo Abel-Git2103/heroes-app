@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map, startWith } from 'rxjs';
 import { HeroesService } from 'src/app/services/heroes.service';
@@ -21,8 +22,8 @@ export class BusquedaComponent {
 
     /* Inyección de dependencias */
     private _route: ActivatedRoute = inject(ActivatedRoute);
-
     private _heroesService: HeroesService = inject(HeroesService);
+    private _snackBar: MatSnackBar = inject(MatSnackBar);
 
     ngOnInit() {
         this.initForm();
@@ -41,6 +42,7 @@ export class BusquedaComponent {
         );
     }
 
+    /* Permite seleccionar al héroe y cargar sus datos */
     seleccionarHeroe() {
         const id: string = this.inputSearchControl.value.toLowerCase();
 
@@ -48,8 +50,8 @@ export class BusquedaComponent {
             next: (heroe: Heroe) => {
                 this.heroeSelected = heroe;
             },
-            error: (e: any) => {
-                console.log(e);
+            error: () => {
+                this._snackBar.open('Se ha producido un error al obtener el héroe seleccionado', 'Cerrar');
             }
         });
     }

@@ -33,11 +33,12 @@ const routes: Routes = [
                 component: ListadoComponent,
                 resolve: { listadoData: globalResolver }
             },
-            {
+            // TODO: Visualizar pantalla de héroe
+            /*             {
                 path: 'heroe/:id',
                 component: HeroeComponent,
                 data: { mode: Constants.pageHeroMode[0] }
-            },
+            }, */
             {
                 path: '**',
                 redirectTo: 'listado'

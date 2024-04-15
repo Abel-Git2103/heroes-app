@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { Heroe } from 'src/app/shared/models/heroe.model';
 import { DialogoConfirmacionComponent } from '../dialogo-confirmacion/dialogo-confirmacion.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-hero-card',
@@ -16,6 +17,7 @@ export class HeroCardComponent {
     /* Inyección de dependencias */
     private _heroesService: HeroesService = inject(HeroesService);
     private _dialog: MatDialog = inject(MatDialog);
+    private _snackBar: MatSnackBar = inject(MatSnackBar);
 
     /* PUBLIC METHODS */
     /* Al hacer click en el botón eliminar, se llama para abrir el diálogo de confirmación */
@@ -31,11 +33,12 @@ export class HeroCardComponent {
                 this._heroesService.eliminarHeroe(id).subscribe({
                     next: (flagDelete: boolean) => {
                         if (flagDelete) {
+                            this._snackBar.open('Héroe eliminado correctamente', 'Cerrar');
                             this._updateHeroesList();
                         }
                     },
-                    error: (e: any) => {
-                        console.log(e);
+                    error: () => {
+                        this._snackBar.open('Se ha producido un error al eliminar el héroe', 'Cerrar');
                     }
                 });
             }

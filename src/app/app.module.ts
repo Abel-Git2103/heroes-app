@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { LoadingInterceptor } from './helpers/loading.interceptor';
 import { SharedModule } from './shared/shared.module';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [AppComponent],
@@ -17,7 +18,8 @@ import { SharedModule } from './shared/shared.module';
             provide: HTTP_INTERCEPTORS,
             useClass: LoadingInterceptor,
             multi: true
-        }
+        },
+        { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' } }
     ],
     bootstrap: [AppComponent]
 })

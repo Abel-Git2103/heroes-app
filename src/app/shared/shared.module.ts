@@ -21,15 +21,17 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { UpperCaseInputDirective } from './directives/upper-case-input.directive';
 
 @NgModule({
-    declarations: [RecursoInexistenteComponent],
+    declarations: [RecursoInexistenteComponent, UpperCaseInputDirective],
     exports: [
         CommonModule,
         HttpClientModule,
         FlexLayoutModule,
         FormsModule,
         ReactiveFormsModule,
+        UpperCaseInputDirective,
         MatAutocompleteModule,
         MatButtonModule,
         MatCardModule,
