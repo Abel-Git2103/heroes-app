@@ -44,7 +44,7 @@ export class BusquedaComponent {
 
     /* Permite seleccionar al héroe y cargar sus datos */
     seleccionarHeroe() {
-        const id: string = this.inputSearchControl.value.toLowerCase();
+        const id: string = this.inputSearchControl.value.toLowerCase().replace(/\s/g, '-');
 
         this._heroesService.obtenerHeroePorId(id).subscribe({
             next: (heroe: Heroe) => {

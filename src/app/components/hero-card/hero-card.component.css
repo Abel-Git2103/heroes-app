@@ -16,6 +16,7 @@ mat-card {
     display: block;
     padding: 0 16px;
     max-width: 100%;
+    max-height: 700px;
 }
 
 .powers-container {

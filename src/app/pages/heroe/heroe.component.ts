@@ -113,10 +113,10 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
                 next: (heroeModificado: Heroe) => {
                     this.heroe = heroeModificado;
                     this._router.navigate([this.URLS.listado]);
-                    this._snackBar.open('Se ha producido un error al modificar el héroe', 'Cerrar');
+                    this._snackBar.open('Héroe modificado correctamente', 'Cerrar');
                 },
-                error: (e: any) => {
-                    console.log(e);
+                error: () => {
+                    this._snackBar.open('Se ha producido un error al modificar el héroe', 'Cerrar');
                 }
             });
         }
