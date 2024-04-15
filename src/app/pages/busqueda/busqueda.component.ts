@@ -2,6 +2,8 @@ import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map, startWith } from 'rxjs';
+import { HeroesService } from 'src/app/services/heroes.service';
+import { Heroe } from 'src/app/shared/models/heroe.model';
 
 @Component({
     selector: 'app-busqueda',
@@ -15,9 +17,12 @@ export class BusquedaComponent {
     public heroesAlias: string[] = [];
     public filteredOptions!: Observable<string[]>;
     public filterData: boolean = false;
+    public heroeSelected!: Heroe;
 
     /* Inyección de dependencias */
     private _route: ActivatedRoute = inject(ActivatedRoute);
+
+    private _heroesService: HeroesService = inject(HeroesService);
 
     ngOnInit() {
         this.initForm();
@@ -34,6 +39,19 @@ export class BusquedaComponent {
             startWith(''),
             map((value) => this._filterData(value || ''))
         );
+    }
+
+    seleccionarHeroe() {
+        const id: string = this.inputSearchControl.value.toLowerCase();
+
+        this._heroesService.obtenerHeroePorId(id).subscribe({
+            next: (heroe: Heroe) => {
+                this.heroeSelected = heroe;
+            },
+            error: (e: any) => {
+                console.log(e);
+            }
+        });
     }
 
     /* PRIVATE METHODS */

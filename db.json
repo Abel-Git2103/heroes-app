@@ -1,184 +1,244 @@
 {
-    "superheroes": [
-        {
-            "id": "robin",
-            "nombre": "Dick Grayson",
-            "alias": "Robin",
-            "imagen": "assets/img/heroes/dc-robin.jpg",
-            "poderes": [
-                "Acróbata",
-                "Cuerpo a cuerpo",
-                "Estratega"
-            ],
-            "historia": "Dick era un joven acróbata de circo cuyos padres fueron asesinados por un gánster, y fue adoptado por Bruce Wayne, quien secretamente era Batman. Bruce entrenó a Dick para convertirse en su compañero en la lucha contra el crimen."
-        },
-        {
-            "id": "arrow",
-            "nombre": "Oliver Queen",
-            "alias": "Arrow",
-            "imagen": "assets/img/heroes/dc-arrow.jpg",
-            "poderes": [
-                "Arquero",
-                "Cuerpo a cuerpo",
-                "Estratega"
-            ],
-            "historia": "Es un multimillonario playboy que, tras un naufragio, queda varado en una isla desierta durante varios años. Durante ese tiempo, aprende habilidades de supervivencia y combate, transformándose en un hábil arquero."
-        },
-        {
-            "id": "wonder-woman",
-            "nombre": "Diana Prince",
-            "alias": "Wonder Woman",
-            "imagen": "assets/img/heroes/dc-wonder.jpg",
-            "poderes": [
-                "Fuerza",
-                "Velocidad",
-                "Resistencia"
-            ],
-            "historia": "Es una princesa amazona de la isla de Themyscira. Criada en un paraíso oculto habitado exclusivamente por mujeres guerreras, Diana se convierte en una formidable combatiente y defensora de la paz y la justicia."
-        },
-        {
-            "id": "black-canary",
-            "nombre": "Dinah Laurel Lance",
-            "alias": "Black Canary",
-            "imagen": "assets/img/heroes/dc-black.jpg",
-            "poderes": [
-                "Fuerza",
-                "Sentidos",
-                "Traje de Vibranium"
-            ],
-            "historia": "Es la hija de Dinah Drake, la primera Black Canary, y hereda tanto su legado como sus habilidades como luchadora y su famoso \"Grito del Canario\". A lo largo de su historia, Dinah se ha destacado como una experta en artes marciales y una justiciera consumada."
-        },
-        {
-            "id": "batman",
-            "nombre": "Bruce Wayne",
-            "alias": "Batman",
-            "imagen": "assets/img/heroes/dc-batman.jpg",
-            "poderes": [
-                "Inteligencia",
-                "Cuerpo a cuerpo",
-                "Tecnología"
-            ],
-            "historia": "Es un niño que presencia el asesinato de sus padres, Thomas y Martha Wayne, en un oscuro callejón de Ciudad Gótica. Este evento traumático lo impulsa a jurar venganza contra el crimen y a dedicar su vida a combatir la injusticia."
-        },
-        {
-            "id": "blue-beetle",
-            "nombre": "Ted Kord",
-            "alias": "Blue Beetle",
-            "imagen": "assets/img/heroes/dc-blue.jpg",
-            "poderes": [
-                "Traje alienígena",
-                "Armas energéticas",
-                "Tecnología alienígena"
-            ],
-            "historia": "Es un genio inventor y empresario que, tras la muerte de su mentor, adquiere el manto de Blue Beetle. Aunque no tiene superpoderes, utiliza un traje especial y una variedad de gadgets tecnológicos para luchar contra el crimen."
-        },
-        {
-            "id": "flash",
-            "nombre": "Barry Allen",
-            "alias": "Flash",
-            "imagen": "assets/img/heroes/dc-flash.jpg",
-            "poderes": [
-                "Super velocidad",
-                "Viajar en el tiempo",
-                "Vibración molecular"
-            ],
-            "historia": "Es un científico forense del Departamento de Policía de Ciudad Central. Durante una tormenta, es alcanzado por un rayo y bañado en productos químicos, lo que le otorga la capacidad de correr a velocidades increíbles."
-        },
-        {
-            "id": "green-lantern",
-            "nombre": "Hal Jordan",
-            "alias": "Green Lantern",
-            "imagen": "assets/img/heroes/dc-green.jpg",
-            "poderes": [
-                "Construcciones de luz",
-                "Vuelo",
-                "Manipulación de energía"
-            ],
-            "historia": "Es un piloto de pruebas audaz y valiente que es reclutado por un alienígena moribundo llamado Abin Sur para convertirse en el protector del sector 2814 del universo."
-        },
-        {
-            "id": "martian-manhunter",
-            "nombre": "John James",
-            "alias": "Martian Manhunter",
-            "imagen": "assets/img/heroes/dc-martian.jpg",
-            "poderes": [
-                "Telepatía",
-                "Cambio de forma",
-                "Fuerza"
-            ],
-            "historia": "Es un ser alienígena proveniente del planeta Marte, donde poseía habilidades telepáticas y una forma física cambiable. Tras la destrucción de su planeta, J'onn llega a la Tierra y asume la identidad de John Jones, un detective marciano."
-        },
-        {
-            "id": "superman",
-            "nombre": "Clark Kent",
-            "alias": "Superman",
-            "imagen": "assets/img/heroes/dc-superman.jpg",
-            "poderes": [
-                "Fuerza",
-                "Vuelo",
-                "Rayos X"
-            ],
-            "historia": "La historia comienza en el lejano planeta Krypton, donde nace como Kal-El, hijo de Jor-El y Lara Lor-Van. Ante la inminente destrucción de su mundo, sus padres lo envían a la Tierra en una nave espacial para salvarlo."
-        },
-        {
-            "id": "captain-america",
-            "nombre": "Steve Rogers",
-            "alias": "Capitán américa",
-            "imagen": "assets/img/heroes/marvel-captain.jpg",
-            "poderes": [
-                "Fuerza",
-                "Cuerpo a cuerpo",
-                "Escudo indestructible"
-            ],
-            "historia": "Es un joven débil y frágil que se ofrece como voluntario para un experimento científico durante la Segunda Guerra Mundial. Este experimento, conocido como el Suero del Súper Soldado, transforma a Rogers en un ser humano físicamente perfecto, con fuerza, velocidad y resistencia sobrehumanas."
-        },
-        {
-            "id": "cyclops",
-            "nombre": "Scott Summers",
-            "alias": "Cyclops",
-            "imagen": "assets/img/heroes/marvel-cyclops.jpg",
-            "poderes": [
-                "Rayos ópticos",
-                "Control de intensidad",
-                "Visión enfocada"
-            ],
-            "historia": "Es un mutante que descubre sus habilidades cuando era adolescente. Scott tiene la capacidad de emitir rayos de energía óptica desde sus ojos, un poder que no puede controlar sin la ayuda de un visor especial o gafas de rubí cuarzo. Esto se debe a una lesión traumática en su infancia que dañó su capacidad de controlar sus rayos de energía."
-        },
-        {
-            "id": "daredevil",
-            "nombre": "Matt Murdock",
-            "alias": "Daredevil",
-            "imagen": "assets/img/heroes/marvel-daredevil.jpg",
-            "poderes": [
-                "Sentidos mejorados",
-                "Reflejos mejorados",
-                "Radar humano"
-            ],
-            "historia": "Es un joven que queda ciego tras ser expuesto a productos químicos radioactivos mientras salva a un anciano de ser atropellado por un camión. A pesar de su ceguera, sus otros sentidos se ven ampliamente mejorados, otorgándole habilidades sobrehumanas."
-        },
-        {
-            "id": "wolverine",
-            "nombre": "James Howlett",
-            "alias": "Wolverine",
-            "imagen": "assets/img/heroes/marvel-wolverine.jpg",
-            "poderes": [
-                "Regeneración acelerada",
-                "Esqueleto de adamantium",
-                "Garras retráctiles de adamantium"
-            ],
-            "historia": "Logan experimentó una serie de eventos traumáticos en su vida temprana, lo que llevó a la manifestación de sus poderes mutantes. Entre estos poderes destacan su habilidad de regeneración acelerada, que le permite curarse de heridas mortales en cuestión de minutos, y su esqueleto recubierto de adamantium, un metal indestructible, junto con sus icónicas garras retráctiles de adamantium que emergen de sus nudillos."
-        },
-        {
-            "id": "iron-man",
-            "nombre": "Tony Stark",
-            "alias": "Iron Man",
-            "imagen": "assets/img/heroes/marvel-iron.jpg",
-            "poderes": [
-                "Armadura",
-                "Inteligencia",
-                "Tecnología"
-            ],
-            "historia": "Es un brillante inventor y empresario multimillonario que hereda el imperio Stark Industries. Durante una visita a Afganistán para demostrar un arma de su propia creación, es secuestrado por terroristas que lo obligan a construir armas para ellos."
-        }
-    ]
+  "superheroes": [
+    {
+      "id": "robin",
+      "nombre": "Dick Grayson",
+      "alias": "Robin",
+      "imagen": "assets/img/heroes/dc-robin.jpg",
+      "poderes": [
+        "Acróbata",
+        "Cuerpo a cuerpo",
+        "Estratega"
+      ],
+      "historia": "Dick era un joven acróbata de circo cuyos padres fueron asesinados por un gánster, y fue adoptado por Bruce Wayne, quien secretamente era Batman. Bruce entrenó a Dick para convertirse en su compañero en la lucha contra el crimen."
+    },
+    {
+      "id": "arrow",
+      "nombre": "Oliver Queen",
+      "alias": "Arrow",
+      "imagen": "assets/img/heroes/dc-arrow.jpg",
+      "poderes": [
+        "Arquero",
+        "Cuerpo a cuerpo",
+        "Estratega"
+      ],
+      "historia": "Es un multimillonario playboy que, tras un naufragio, queda varado en una isla desierta durante varios años. Durante ese tiempo, aprende habilidades de supervivencia y combate, transformándose en un hábil arquero."
+    },
+    {
+      "id": "wonder-woman",
+      "nombre": "Diana Prince",
+      "alias": "Wonder Woman",
+      "imagen": "assets/img/heroes/dc-wonder.jpg",
+      "poderes": [
+        "Fuerza",
+        "Velocidad",
+        "Resistencia"
+      ],
+      "historia": "Es una princesa amazona de la isla de Themyscira. Criada en un paraíso oculto habitado exclusivamente por mujeres guerreras, Diana se convierte en una formidable combatiente y defensora de la paz y la justicia."
+    },
+    {
+      "id": "black-canary",
+      "nombre": "Dinah Laurel Lance",
+      "alias": "Black Canary",
+      "imagen": "assets/img/heroes/dc-black.jpg",
+      "poderes": [
+        "Fuerza",
+        "Sentidos",
+        "Traje de Vibranium"
+      ],
+      "historia": "Es la hija de Dinah Drake, la primera Black Canary, y hereda tanto su legado como sus habilidades como luchadora y su famoso \"Grito del Canario\". A lo largo de su historia, Dinah se ha destacado como una experta en artes marciales y una justiciera consumada."
+    },
+    {
+      "id": "batman",
+      "nombre": "Bruce Wayne",
+      "alias": "Batman",
+      "imagen": "assets/img/heroes/dc-batman.jpg",
+      "poderes": [
+        "Inteligencia",
+        "Cuerpo a cuerpo",
+        "Tecnología"
+      ],
+      "historia": "Es un niño que presencia el asesinato de sus padres, Thomas y Martha Wayne, en un oscuro callejón de Ciudad Gótica. Este evento traumático lo impulsa a jurar venganza contra el crimen y a dedicar su vida a combatir la injusticia."
+    },
+    {
+      "id": "blue-beetle",
+      "nombre": "Ted Kord",
+      "alias": "Blue Beetle",
+      "imagen": "assets/img/heroes/dc-blue.jpg",
+      "poderes": [
+        "Traje alienígena",
+        "Armas energéticas",
+        "Tecnología alienígena"
+      ],
+      "historia": "Es un genio inventor y empresario que, tras la muerte de su mentor, adquiere el manto de Blue Beetle. Aunque no tiene superpoderes, utiliza un traje especial y una variedad de gadgets tecnológicos para luchar contra el crimen."
+    },
+    {
+      "id": "flash",
+      "nombre": "Barry Allen",
+      "alias": "Flash",
+      "imagen": "assets/img/heroes/dc-flash.jpg",
+      "poderes": [
+        "Super velocidad",
+        "Viajar en el tiempo",
+        "Vibración molecular"
+      ],
+      "historia": "Es un científico forense del Departamento de Policía de Ciudad Central. Durante una tormenta, es alcanzado por un rayo y bañado en productos químicos, lo que le otorga la capacidad de correr a velocidades increíbles."
+    },
+    {
+      "id": "green-lantern",
+      "nombre": "Hal Jordan",
+      "alias": "Green Lantern",
+      "imagen": "assets/img/heroes/dc-green.jpg",
+      "poderes": [
+        "Construcciones de luz",
+        "Vuelo",
+        "Manipulación de energía"
+      ],
+      "historia": "Es un piloto de pruebas audaz y valiente que es reclutado por un alienígena moribundo llamado Abin Sur para convertirse en el protector del sector 2814 del universo."
+    },
+    {
+      "id": "martian-manhunter",
+      "nombre": "John James",
+      "alias": "Martian Manhunter",
+      "imagen": "assets/img/heroes/dc-martian.jpg",
+      "poderes": [
+        "Telepatía",
+        "Cambio de forma",
+        "Fuerza"
+      ],
+      "historia": "Es un ser alienígena proveniente del planeta Marte, donde poseía habilidades telepáticas y una forma física cambiable. Tras la destrucción de su planeta, J'onn llega a la Tierra y asume la identidad de John Jones, un detective marciano."
+    },
+    {
+      "id": "superman",
+      "nombre": "Clark Kent",
+      "alias": "Superman",
+      "imagen": "assets/img/heroes/dc-superman.jpg",
+      "poderes": [
+        "Fuerza",
+        "Vuelo",
+        "Rayos X"
+      ],
+      "historia": "La historia comienza en el lejano planeta Krypton, donde nace como Kal-El, hijo de Jor-El y Lara Lor-Van. Ante la inminente destrucción de su mundo, sus padres lo envían a la Tierra en una nave espacial para salvarlo."
+    },
+    {
+      "id": "captain-america",
+      "nombre": "Steve Rogers",
+      "alias": "Capitán américa",
+      "imagen": "assets/img/heroes/marvel-captain.jpg",
+      "poderes": [
+        "Fuerza",
+        "Cuerpo a cuerpo",
+        "Escudo indestructible"
+      ],
+      "historia": "Es un joven débil y frágil que se ofrece como voluntario para un experimento científico durante la Segunda Guerra Mundial. Este experimento, conocido como el Suero del Súper Soldado, transforma a Rogers en un ser humano físicamente perfecto, con fuerza, velocidad y resistencia sobrehumanas."
+    },
+    {
+      "id": "cyclops",
+      "nombre": "Scott Summers",
+      "alias": "Cyclops",
+      "imagen": "assets/img/heroes/marvel-cyclops.jpg",
+      "poderes": [
+        "Rayos ópticos",
+        "Control de intensidad",
+        "Visión enfocada"
+      ],
+      "historia": "Es un mutante que descubre sus habilidades cuando era adolescente. Scott tiene la capacidad de emitir rayos de energía óptica desde sus ojos, un poder que no puede controlar sin la ayuda de un visor especial o gafas de rubí cuarzo. Esto se debe a una lesión traumática en su infancia que dañó su capacidad de controlar sus rayos de energía."
+    },
+    {
+      "id": "daredevil",
+      "nombre": "Matt Murdock",
+      "alias": "Daredevil",
+      "imagen": "assets/img/heroes/marvel-daredevil.jpg",
+      "poderes": [
+        "Sentidos mejorados",
+        "Reflejos mejorados",
+        "Radar humano"
+      ],
+      "historia": "Es un joven que queda ciego tras ser expuesto a productos químicos radioactivos mientras salva a un anciano de ser atropellado por un camión. A pesar de su ceguera, sus otros sentidos se ven ampliamente mejorados, otorgándole habilidades sobrehumanas."
+    },
+    {
+      "id": "wolverine",
+      "nombre": "James Howlett",
+      "alias": "Wolverine",
+      "imagen": "assets/img/heroes/marvel-wolverine.jpg",
+      "poderes": [
+        "Regeneración acelerada",
+        "Esqueleto de adamantium",
+        "Garras retráctiles de adamantium"
+      ],
+      "historia": "Logan experimentó una serie de eventos traumáticos en su vida temprana, lo que llevó a la manifestación de sus poderes mutantes. Entre estos poderes destacan su habilidad de regeneración acelerada, que le permite curarse de heridas mortales en cuestión de minutos, y su esqueleto recubierto de adamantium, un metal indestructible, junto con sus icónicas garras retráctiles de adamantium que emergen de sus nudillos."
+    },
+    {
+      "id": "iron-man",
+      "nombre": "Tony Stark",
+      "alias": "Iron Man",
+      "imagen": "assets/img/heroes/marvel-iron.jpg",
+      "poderes": [
+        "Armadura",
+        "Inteligencia",
+        "Tecnología"
+      ],
+      "historia": "Es un brillante inventor y empresario multimillonario que hereda el imperio Stark Industries. Durante una visita a Afganistán para demostrar un arma de su propia creación, es secuestrado por terroristas que lo obligan a construir armas para ellos."
+    },
+    {
+      "id": "redmi",
+      "nombre": "Pedro Piqueras",
+      "alias": "Redmi",
+      "historia": "Es un periodista de informativos telecinco muy agorero. me gusta su sentido del humor, aunque se retiro este 2024",
+      "poderes": [
+        "Listo",
+        "Serio",
+        "Majo"
+      ],
+      "imagen": "http://localhost:4200/assets/img/heroes/marvel-cyclops.jpg"
+    },
+    {
+      "id": "redmi",
+      "nombre": "Pedro Piqueras",
+      "alias": "Redmi",
+      "historia": "Es un periodista de informativos telecinco muy agorero. me gusta su sentido del humor, aunque se retiro este 2024",
+      "poderes": [
+        "Listo",
+        "Serio",
+        "Majo"
+      ],
+      "imagen": "http://localhost:4200/assets/img/heroes/marvel-cyclops.jpg"
+    },
+    {
+      "id": "redmi",
+      "nombre": "Pedro Piqueras",
+      "alias": "Redmi",
+      "historia": "Es un periodista de informativos telecinco muy agorero. me gusta su sentido del humor, aunque se retiro este 2024",
+      "poderes": [
+        "Listo",
+        "Serio",
+        "Majo"
+      ],
+      "imagen": "http://localhost:4200/assets/img/heroes/marvel-cyclops.jpg"
+    },
+    {
+      "id": "redmi",
+      "nombre": "Pedro Piqueras",
+      "alias": "Redmi",
+      "historia": "Es un periodista de informativos telecinco muy agorero. me gusta su sentido del humor, aunque se retiro este 2024",
+      "poderes": [
+        "Listo",
+        "Serio",
+        "Majo"
+      ],
+      "imagen": "http://localhost:4200/assets/img/heroes/marvel-cyclops.jpg"
+    },
+    {
+      "id": "redmi",
+      "nombre": "Pedro Piqueras",
+      "alias": "Redmi",
+      "historia": "Es un periodista de informativos telecinco muy agorero. me gusta su sentido del humor, aunque se retiro este 2024",
+      "poderes": [
+        "Listo",
+        "Serio",
+        "Majo"
+      ],
+      "imagen": "http://localhost:4200/assets/img/heroes/marvel-cyclops.jpg"
+    }
+  ]
 }
