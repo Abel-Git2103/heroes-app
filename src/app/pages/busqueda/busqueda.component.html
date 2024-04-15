@@ -1,6 +1,7 @@
 <!-- Contenedor del título de la página -->
 <div class="custom-heading-container mb-3"><h1>Búsqueda de héroes</h1></div>
 
+<!-- Contiene el input del formulario -->
 <div class="form-container">
     <!-- Formulario de búsqueda de héroe -->
     <form class="search-form">
@@ -16,42 +17,19 @@
             <mat-error *ngIf="inputSearchControl.hasError('required')"> Debe ingresar un alias de héroe </mat-error>
         </mat-form-field>
     </form>
+</div>
 
+<!-- Contiene el resultado de la búsqueda -->
+<div class="results-container" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px">
     <ng-container *ngIf="heroeSelected">
-        <div class="results-container my-3">
-            <!-- Tarjeta de superheroe -->
-            <mat-card class="card-container" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(20%-10px)">
-                <!-- Header de la tarjeta -->
-                <mat-card-header>
-                    <mat-card-title>{{ heroeSelected.alias }}</mat-card-title>
-                    <mat-card-subtitle class="card-subtitle">{{ heroeSelected.nombre }}</mat-card-subtitle>
-                </mat-card-header>
-
-                <mat-divider class="card-divider"></mat-divider>
-
-                <!-- Imagen de la tarjeta -->
-                <img mat-card-image class="card-image mt-3" src="{{ heroeSelected.imagen }}" alt="Foto de superhéroe" />
-
-                <!-- Contenedor de poderes del héroe -->
-                <div class="powers-container mt-1">
-                    <ng-container *ngFor="let poder of heroeSelected.poderes">
-                        <mat-chip-listbox>
-                            <mat-chip>
-                                <span class="power-item">{{ poder }}</span>
-                            </mat-chip>
-                        </mat-chip-listbox>
-                    </ng-container>
-                </div>
-
-                <!-- Contenedor de la historia del héroe -->
-                <mat-card-content class="my-3">
-                    <p>
-                        {{ heroeSelected.historia }}
-                    </p>
-                </mat-card-content>
-
-                <mat-divider class="card-divider"></mat-divider>
-            </mat-card>
-        </div>
+        <app-hero-card
+            class="mt-3"
+            [heroe]="heroeSelected"
+            fxFlex="0 1 calc(35% - 15px)"
+            fxFlex.lt-xl="0 1 calc(35% - 15px)"
+            fxFlex.lt-lg="0 1 calc(60% - 15px)"
+            fxFlex.lt-md="0 1 calc(80% - 15px)"
+            fxFlex.lt-sm="100%"
+        ></app-hero-card>
     </ng-container>
 </div>
