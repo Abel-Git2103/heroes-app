@@ -7,7 +7,7 @@
         <mat-form-field class="form-full-width">
             <mat-label>Alias del héroe</mat-label>
             <input type="text" aria-label="Buscador de héroe" matInput [formControl]="inputSearchControl" autocomplete="off" [matAutocomplete]="auto" />
-            <mat-autocomplete #auto="matAutocomplete">
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="seleccionarHeroe()">
                 <mat-option *ngFor="let alias of filteredOptions | async" [value]="alias">
                     {{ alias }}
                 </mat-option>
@@ -16,4 +16,42 @@
             <mat-error *ngIf="inputSearchControl.hasError('required')"> Debe ingresar un alias de héroe </mat-error>
         </mat-form-field>
     </form>
+
+    <ng-container *ngIf="heroeSelected">
+        <div class="results-container my-3">
+            <!-- Tarjeta de superheroe -->
+            <mat-card class="card-container" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(20%-10px)">
+                <!-- Header de la tarjeta -->
+                <mat-card-header>
+                    <mat-card-title>{{ heroeSelected.alias }}</mat-card-title>
+                    <mat-card-subtitle class="card-subtitle">{{ heroeSelected.nombre }}</mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-divider class="card-divider"></mat-divider>
+
+                <!-- Imagen de la tarjeta -->
+                <img mat-card-image class="card-image mt-3" src="{{ heroeSelected.imagen }}" alt="Foto de superhéroe" />
+
+                <!-- Contenedor de poderes del héroe -->
+                <div class="powers-container mt-1">
+                    <ng-container *ngFor="let poder of heroeSelected.poderes">
+                        <mat-chip-listbox>
+                            <mat-chip>
+                                <span class="power-item">{{ poder }}</span>
+                            </mat-chip>
+                        </mat-chip-listbox>
+                    </ng-container>
+                </div>
+
+                <!-- Contenedor de la historia del héroe -->
+                <mat-card-content class="my-3">
+                    <p>
+                        {{ heroeSelected.historia }}
+                    </p>
+                </mat-card-content>
+
+                <mat-divider class="card-divider"></mat-divider>
+            </mat-card>
+        </div>
+    </ng-container>
 </div>

@@ -39,10 +39,10 @@
 
             <!-- Contenedor de los botones de la tarjeta -->
             <mat-card-actions>
-                <button mat-raised-button color="primary" class="card-button-editar" (click)="navigateToEdit(heroe.id)">
+                <button mat-raised-button color="primary" class="card-button-green" [routerLink]="['/app/editar-heroe', heroe.id]">
                     <mat-icon aria-hidden="false" aria-label="Editar héroe" fontIcon="edit"></mat-icon><span>Editar</span>
                 </button>
-                <button mat-raised-button class="card-button" (click)="confirmDialogDelete()">
+                <button mat-raised-button class="card-button" (click)="confirmDialogDelete(heroe.id)">
                     <mat-icon aria-hidden="false" aria-label="Eliminar héroe" fontIcon="delete"></mat-icon><span>Eliminar</span>
                 </button>
             </mat-card-actions>

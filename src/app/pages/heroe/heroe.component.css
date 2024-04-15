@@ -1,0 +1,43 @@
+/* Estilos de los templates */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card-column {
+    padding: 20px;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.card-column-image {
+    padding: 20px;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.image-container {
+    height: 100%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.form-container {
+    height: 100%;
+}
+
+.mat-text-area {
+    max-height: 70px;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-button-green {
+    background-color: var(--colorPrincipal);
+}
