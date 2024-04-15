@@ -2,30 +2,31 @@
 .cards-container {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    align-items: center;
 }
 
 .card-column {
     padding: 20px;
     border: 1px solid var(--colorPrincipal);
+    height: fit-content;
 }
 
 .card-column-image {
     padding: 20px;
     border: 1px solid var(--colorPrincipal);
-}
-
-.image-container {
-    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    height: 650px;
 }
 
 img {
-    height: 100%;
     width: 100%;
+    max-width: 400px;
+    height: 600px;
 }
 
 .form-container {
-    height: 100%;
+    height: fit-content;
 }
 
 .mat-text-area {

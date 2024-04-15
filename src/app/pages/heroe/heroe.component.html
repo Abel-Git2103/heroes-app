@@ -8,94 +8,102 @@
         <ng-template #altaPage><h1>Añadir héroe</h1></ng-template>
     </div>
 
-    <div class="cards-container grid">
-        <div class="sm:col-12 md:col-12 lg:col-6 xl:col-6">
-            <!-- Tarjeta que contiene la información del héroe -->
-            <mat-card class="card-column">
-                <!-- Formulario de inserción de héroe -->
-                <form [formGroup]="heroeForm" class="form-container grid" (ngSubmit)="guardarHeroe()">
-                    <!-- Input del nombre de héroe -->
-                    <mat-form-field class="col-12">
-                        <mat-label>Nombre del héroe</mat-label>
-                        <input type="text" aria-label="Nombre del héroe" matInput formControlName="nombre" autocomplete="off" required />
-                        <mat-error *ngIf="heroeForm.get('nombre')?.hasError('required')"> Debe ingresar el nombre del héroe </mat-error>
-                    </mat-form-field>
+    <div class="cards-container" fxLayout="row" fxLayout.lt-sm="column" fxLayout.lt-md="column" fxLayoutGap="50px">
+        <!-- Tarjeta que contiene la información del héroe -->
+        <mat-card
+            class="card-column"
+            fxFlex="0 1 calc(40% - 15px)"
+            fxFlex.lt-xl="0 1 calc(40% - 15px)"
+            fxFlex.lt-lg="0 1 calc(40% - 15px)"
+            fxFlex.lt-md="100%"
+            fxFlex.lt-sm="100%"
+        >
+            <!-- Formulario de inserción de héroe -->
+            <form [formGroup]="heroeForm" class="form-container grid" (ngSubmit)="guardarHeroe()">
+                <!-- Input del nombre de héroe -->
+                <mat-form-field class="col-12">
+                    <mat-label>Nombre del héroe</mat-label>
+                    <input type="text" aria-label="Nombre del héroe" matInput formControlName="nombre" autocomplete="off" required />
+                    <mat-error *ngIf="heroeForm.get('nombre')?.hasError('required')"> Debe ingresar el nombre del héroe </mat-error>
+                </mat-form-field>
 
-                    <!-- Input de alias del héroe -->
-                    <mat-form-field class="col-12">
-                        <mat-label>Alias del héroe</mat-label>
-                        <input type="text" aria-label="Alias del héroe" matInput formControlName="alias" autocomplete="off" required />
-                        <mat-error *ngIf="heroeForm.get('alias')?.hasError('required')"> Debe ingresar el alias del héroe </mat-error>
-                    </mat-form-field>
+                <!-- Input de alias del héroe -->
+                <mat-form-field class="col-12">
+                    <mat-label>Alias del héroe</mat-label>
+                    <input type="text" aria-label="Alias del héroe" matInput formControlName="alias" autocomplete="off" required />
+                    <mat-error *ngIf="heroeForm.get('alias')?.hasError('required')"> Debe ingresar el alias del héroe </mat-error>
+                </mat-form-field>
 
-                    <!-- Input de historia del héroe -->
-                    <mat-form-field class="col-12">
-                        <mat-label>Historia del héroe</mat-label>
-                        <textarea class="mat-text-area" matInput aria-label="Historia del héroe" formControlName="historia" autocomplete="off" required></textarea>
-                        <mat-error *ngIf="heroeForm.get('historia')?.hasError('required')"> Debe ingresar la historia del héroe </mat-error>
-                    </mat-form-field>
+                <!-- Input de historia del héroe -->
+                <mat-form-field class="col-12">
+                    <mat-label>Historia del héroe</mat-label>
+                    <textarea class="mat-text-area" matInput aria-label="Historia del héroe" formControlName="historia" autocomplete="off" required></textarea>
+                    <mat-error *ngIf="heroeForm.get('historia')?.hasError('required')"> Debe ingresar la historia del héroe </mat-error>
+                </mat-form-field>
 
-                    <!-- Input de poderes del héroe -->
-                    <mat-form-field class="col-12">
-                        <mat-label>Poderes del héroe</mat-label>
-                        <mat-chip-grid #chipGrid aria-label="Inserción de poder" formControlName="poderes" required>
-                            <mat-chip-row *ngFor="let poder of heroe.poderes" (removed)="eliminarPoder(poder)">
-                                {{ poder }}
-                                <button matChipRemove [attr.aria-label]="'Eliminar ' + poder">
-                                    <mat-icon fontIcon="cancel"></mat-icon>
-                                </button>
-                            </mat-chip-row>
-                        </mat-chip-grid>
-                        <input
-                            #poderesInput
-                            [placeholder]="checkMaxChips() ? 'Se ha introducido el número máximo de poderes' : 'Pulsa intro para insertar poder...'"
-                            matInput
-                            [readonly]="checkMaxChips()"
-                            aria-label="Poderes del héroe"
-                            [matChipInputFor]="chipGrid"
-                            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                            (matChipInputTokenEnd)="insertarPoder($event)"
-                        />
-                        <mat-hint align="start">Máximo de poderes {{ heroe.poderes.length }}/3</mat-hint>
-                        <mat-error *ngIf="heroeForm.get('poderes')?.hasError('required')"> Debe ingresar algún poder del héroe </mat-error>
-                    </mat-form-field>
+                <!-- Input de poderes del héroe -->
+                <mat-form-field class="col-12">
+                    <mat-label>Poderes del héroe</mat-label>
+                    <mat-chip-grid #chipGrid aria-label="Inserción de poder" formControlName="poderes" required>
+                        <mat-chip-row *ngFor="let poder of heroe.poderes" (removed)="eliminarPoder(poder)">
+                            {{ poder }}
+                            <button matChipRemove [attr.aria-label]="'Eliminar ' + poder">
+                                <mat-icon fontIcon="cancel"></mat-icon>
+                            </button>
+                        </mat-chip-row>
+                    </mat-chip-grid>
+                    <input
+                        #poderesInput
+                        [placeholder]="checkMaxChips() ? 'Se ha introducido el número máximo de poderes' : 'Pulsa intro para insertar poder...'"
+                        matInput
+                        [readonly]="checkMaxChips()"
+                        aria-label="Poderes del héroe"
+                        [matChipInputFor]="chipGrid"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        (matChipInputTokenEnd)="insertarPoder($event)"
+                    />
+                    <mat-hint align="start">Máximo de poderes {{ heroe.poderes.length }}/3</mat-hint>
+                    <mat-error *ngIf="heroeForm.get('poderes')?.hasError('required')"> Debe ingresar algún poder del héroe </mat-error>
+                </mat-form-field>
 
-                    <!-- Input de imagen del héroe -->
-                    <mat-form-field class="col-12">
-                        <mat-label>Imagen del héroe</mat-label>
-                        <input
-                            type="text"
-                            aria-label="Imagen del héroe"
-                            matInput
-                            formControlName="imagen"
-                            autocomplete="off"
-                            required
-                            placeholder="Inserta la URL de la imagen..."
-                        />
-                        <mat-error *ngIf="heroeForm.get('imagen')?.hasError('required')"> Debe insertar una imagen del héroe </mat-error>
-                    </mat-form-field>
+                <!-- Input de imagen del héroe -->
+                <mat-form-field class="col-12">
+                    <mat-label>Imagen del héroe</mat-label>
+                    <input
+                        type="text"
+                        aria-label="Imagen del héroe"
+                        matInput
+                        formControlName="imagen"
+                        autocomplete="off"
+                        required
+                        placeholder="Inserta la URL de la imagen..."
+                    />
+                    <mat-error *ngIf="heroeForm.get('imagen')?.hasError('required')"> Debe insertar una imagen del héroe </mat-error>
+                </mat-form-field>
 
-                    <!-- Contenedor de los botones de la tarjeta -->
-                    <mat-card-actions>
-                        <button mat-raised-button color="primary" class="card-button-green">
-                            <mat-icon aria-hidden="false" aria-label="Añadir héroe" fontIcon="save"></mat-icon><span>Guardar</span>
-                        </button>
-                        <button mat-raised-button color="warn" (click)="resetForm()">
-                            <mat-icon aria-hidden="false" aria-label="Limpiar formulario" fontIcon="delete"></mat-icon><span>Limpiar</span>
-                        </button>
-                    </mat-card-actions>
-                </form>
-            </mat-card>
-        </div>
+                <!-- Contenedor de los botones de la tarjeta -->
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" class="card-button-green">
+                        <mat-icon aria-hidden="false" aria-label="Añadir héroe" fontIcon="save"></mat-icon><span>Guardar</span>
+                    </button>
+                    <button mat-raised-button color="warn" (click)="resetForm()">
+                        <mat-icon aria-hidden="false" aria-label="Limpiar formulario" fontIcon="delete"></mat-icon><span>Limpiar</span>
+                    </button>
+                </mat-card-actions>
+            </form>
+        </mat-card>
 
-        <div class="sm:col-6 md:col-6 lg:col-4 xl:col-3">
-            <!-- Tarjeta que contiene la imagen del héroe -->
-            <mat-card class="card-column-image">
-                <div class="image-container">
-                    <img mat-card-image [src]="heroeForm.get('imagen')?.value || 'assets/img/no-image.png'" alt="Foto de superhéroe" />
-                </div>
-            </mat-card>
-        </div>
+        <!-- Tarjeta que contiene la imagen del héroe -->
+        <mat-card
+            class="card-column-image"
+            fxFlex="0 1 calc(40% - 15px)"
+            fxFlex.lt-xl="0 1 calc(40% - 15px)"
+            fxFlex.lt-lg="0 1 calc(40% - 15px)"
+            fxFlex.lt-md="100%"
+            fxFlex.lt-sm="100%"
+        >
+            <img mat-card-image [src]="heroeForm.get('imagen')?.value || 'assets/img/no-image.png'" alt="Foto de superhéroe" />
+        </mat-card>
     </div>
 </ng-template>
 

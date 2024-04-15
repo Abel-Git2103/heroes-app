@@ -2,50 +2,16 @@
 <div class="custom-heading-container mb-3"><h1>Listado de héroes</h1></div>
 
 <!-- Grid que muestra el listado de heroés ajustando número de columnas al cambiar tamaño de ventanta para que sea responsive -->
-<div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="15px" fxLayoutAlign="flex-start">
     <ng-container *ngFor="let heroe of listadoHeroes">
-        <!-- Tarjeta de superheroe -->
-        <mat-card class="card-container" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(20%-10px)">
-            <!-- Header de la tarjeta -->
-            <mat-card-header>
-                <mat-card-title>{{ heroe.alias }}</mat-card-title>
-                <mat-card-subtitle class="card-subtitle">{{ heroe.nombre }}</mat-card-subtitle>
-            </mat-card-header>
-
-            <mat-divider class="card-divider"></mat-divider>
-
-            <!-- Imagen de la tarjeta -->
-            <img mat-card-image class="card-image mt-3" src="{{ heroe.imagen }}" alt="Foto de superhéroe" />
-
-            <!-- Contenedor de poderes del héroe -->
-            <div class="powers-container mt-1">
-                <ng-container *ngFor="let poder of heroe.poderes">
-                    <mat-chip-listbox>
-                        <mat-chip>
-                            <span class="power-item">{{ poder }}</span>
-                        </mat-chip>
-                    </mat-chip-listbox>
-                </ng-container>
-            </div>
-
-            <!-- Contenedor de la historia del héroe -->
-            <mat-card-content class="my-3">
-                <p>
-                    {{ heroe.historia }}
-                </p>
-            </mat-card-content>
-
-            <mat-divider class="card-divider"></mat-divider>
-
-            <!-- Contenedor de los botones de la tarjeta -->
-            <mat-card-actions>
-                <button mat-raised-button color="primary" class="card-button-green" [routerLink]="['/app/editar-heroe', heroe.id]">
-                    <mat-icon aria-hidden="false" aria-label="Editar héroe" fontIcon="edit"></mat-icon><span>Editar</span>
-                </button>
-                <button mat-raised-button class="card-button" (click)="confirmDialogDelete(heroe.id)">
-                    <mat-icon aria-hidden="false" aria-label="Eliminar héroe" fontIcon="delete"></mat-icon><span>Eliminar</span>
-                </button>
-            </mat-card-actions>
-        </mat-card>
+        <app-hero-card
+            [heroe]="heroe"
+            (actualizarListado)="updateHeroesList()"
+            fxFlex="0 1 calc(20% - 15px)"
+            fxFlex.lt-xl="0 1 calc(25% - 15px)"
+            fxFlex.lt-lg="0 1 calc(33.3% - 15px)"
+            fxFlex.lt-md="0 1 calc(50% - 15px)"
+            fxFlex.lt-sm="100%"
+        ></app-hero-card>
     </ng-container>
 </div>
