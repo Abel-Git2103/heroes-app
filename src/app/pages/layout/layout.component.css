@@ -5,6 +5,13 @@
     font-family: var(--fuenteSecundaria);
     border-bottom: 2px solid var(--colorPrincipal);
     height: 50px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.container {
+    margin-top: 80px;
 }
 
 .espaciado {
@@ -12,7 +19,7 @@
 }
 
 /* Estilo de los botones del toolbar */
-.mat-mdc-button {
+.buttonsToolbar {
     font-family: var(--fuenteSecundaria);
     margin-left: 2%;
 
@@ -40,6 +47,10 @@
             display: block;
         }
     }
+}
+
+.mat-mdc-button {
+    --mat-mdc-button-persistent-ripple-color: none;
 }
 
 /* Toggle del toolbar */
@@ -105,6 +116,27 @@
 /* Cuando hago clic, desaparece la ralla hacia la derecha */
 .toggleButton.active span:nth-child(3) {
     transform: translateX(60px);
+}
+
+/* Estilos de los botones colapsados del navbar */
+.toolbarButtonsCollapsed {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    background-color: var(--colorSecundario);
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid var(--colorPrincipal);
+    z-index: 2;
+}
+
+.btnCollapsed {
+    font-family: var(--fuenteSecundaria);
+    height: 45px;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 1px solid var(--colorPrincipal);
 }
 
 /* --------------------------- */
