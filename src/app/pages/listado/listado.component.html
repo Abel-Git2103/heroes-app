@@ -2,7 +2,7 @@
 <div class="custom-heading-container mb-3"><h1>Listado de héroes</h1></div>
 
 <!-- Grid que muestra el listado de heroés ajustando número de columnas al cambiar tamaño de ventanta para que sea responsive -->
-<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="15px" fxLayoutAlign="flex-start">
+<div class="flex-layout-container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="15px" fxLayoutAlign="flex-start">
     <ng-container *ngFor="let heroe of listadoHeroes">
         <app-hero-card
             [heroe]="heroe"

@@ -5,13 +5,13 @@
 
     <!-- Template que muestra los botones cuando la pantalla está por encima de 680px -->
     <ng-container *ngIf="showToolbarButtons; else showToggle">
-        <button mat-button class="btnListado" (click)="switchActiveClass('btnListado')" [routerLink]="['/app/listado']">
+        <button mat-button [disableRipple]="true" class="buttonsToolbar btnListado" (click)="switchActiveClass('btnListado')" [routerLink]="['/app/listado']">
             <mat-icon aria-hidden="false" aria-label="Visualizar listado" fontIcon="list"></mat-icon><span>Listado de héroes</span>
         </button>
-        <button mat-button class="btnBuscar" (click)="switchActiveClass('btnBuscar')" [routerLink]="['/app/busqueda']">
+        <button mat-button [disableRipple]="true" class="buttonsToolbar btnBuscar" (click)="switchActiveClass('btnBuscar')" [routerLink]="['/app/busqueda']">
             <mat-icon aria-hidden="false" aria-label="Búsqueda de héroe" fontIcon="search"></mat-icon><span>Buscar héroe</span>
         </button>
-        <button mat-button class="btnNuevo" (click)="switchActiveClass('btnNuevo')" [routerLink]="['/app/nuevo-heroe']">
+        <button mat-button [disableRipple]="true" class="buttonsToolbar btnNuevo" (click)="switchActiveClass('btnNuevo')" [routerLink]="['/app/nuevo-heroe']">
             <mat-icon aria-hidden="false" aria-label="Inserción de héroe" fontIcon="add"></mat-icon><span>Añadir héroe</span>
         </button>
     </ng-container>
@@ -24,9 +24,24 @@
             <span></span>
         </div>
     </ng-template>
+
+    <!-- Template que se muestra cuando la pantalla está por debajo de 1060px al clicar en el toggle button -->
+    <ng-container *ngIf="showCollapsedToolbar && !showToolbarButtons">
+        <div class="toolbarButtonsCollapsed">
+            <button mat-button class="btnCollapsed btnListado" (click)="switchActiveClass('btnListado')" [routerLink]="['/app/listado']">
+                <mat-icon aria-hidden="false" aria-label="Visualizar listado" fontIcon="list"></mat-icon><span>Listado de héroes</span>
+            </button>
+            <button mat-button class="btnCollapsed btnBuscar" (click)="switchActiveClass('btnBuscar')" [routerLink]="['/app/busqueda']">
+                <mat-icon aria-hidden="false" aria-label="Búsqueda de héroe" fontIcon="search"></mat-icon><span>Buscar héroe</span>
+            </button>
+            <button mat-button class="btnCollapsed btnNuevo" (click)="switchActiveClass('btnNuevo')" [routerLink]="['/app/nuevo-heroe']">
+                <mat-icon aria-hidden="false" aria-label="Inserción de héroe" fontIcon="add"></mat-icon><span>Añadir héroe</span>
+            </button>
+        </div>
+    </ng-container>
 </mat-toolbar>
 
 <!-- Contenedor principal del routing -->
-<div class="container my-5 px-3">
+<div class="container mx-3">
     <router-outlet></router-outlet>
 </div>
