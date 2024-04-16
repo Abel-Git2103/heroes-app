@@ -56,7 +56,7 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
     }
 
     ngAfterContentChecked() {
-        this.selectedTemplate = this._selectTemplateRef(this.modePage.clave);
+        this.selectedTemplate = this._selectTemplateRef(this.modePage['clave']);
     }
 
     /* Inserta en el array de poderes el poder introducido en el input */
@@ -97,7 +97,7 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
 
         this.ajustarGramatica();
 
-        if (this.modePage.clave === this.PAGEMODES[2]['clave']) {
+        if (this.modePage['clave'] === this.PAGEMODES[2]['clave']) {
             this._heroesService.insertarHeroe(this.heroeActual).subscribe({
                 next: (heroeInsertado: Heroe) => {
                     this.heroe = heroeInsertado;
@@ -136,12 +136,12 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
     /* Inicializa el formulario */
     private _initForm() {
         this.heroeForm = this._formBuilder.group({
-            id: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.id],
-            nombre: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.nombre, Validators.required],
-            alias: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.alias.toUpperCase(), Validators.required],
-            historia: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.historia, Validators.required],
-            poderes: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.poderes, Validators.required],
-            imagen: [this.modePage.clave === this.PAGEMODES[2]['clave'] ? '' : this.heroe.imagen, Validators.required]
+            id: [this.modePage['clave'] === this.PAGEMODES[2]['clave'] ? '' : this.heroe.id],
+            nombre: [this.modePage['clave'] === this.PAGEMODES[2]['clave'] ? '' : this.heroe.nombre, Validators.required],
+            alias: [this.modePage['clave'] === this.PAGEMODES[2]['clave'] ? '' : this.heroe.alias.toUpperCase(), Validators.required],
+            historia: [this.modePage['clave'] === this.PAGEMODES[2]['clave'] ? '' : this.heroe.historia, Validators.required],
+            poderes: [this.modePage['clave'] === this.PAGEMODES[2]['clave'] ? '' : this.heroe.poderes, Validators.required],
+            imagen: [this.modePage['clave'] === this.PAGEMODES[2]['clave'] ? '' : this.heroe.imagen, Validators.required]
         });
     }
 

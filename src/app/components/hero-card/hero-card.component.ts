@@ -11,7 +11,7 @@ import { DialogoConfirmacionComponent } from '../dialogo-confirmacion/dialogo-co
     styleUrls: ['./hero-card.component.css']
 })
 export class HeroCardComponent {
-    @Input() heroe!: Heroe;
+    @Input() heroe: Heroe = new Heroe();
     @Output() actualizarListado: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     /* Inyección de dependencias */
