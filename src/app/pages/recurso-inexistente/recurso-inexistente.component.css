@@ -1,0 +1,33 @@
+/* Estilos de página 404 */
+.recurso-inexistente {
+    background: #fff;
+    margin-top: 200px;
+}
+
+.flex-layout-container {
+    justify-content: center;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 80px;
+    color: var(--colorPrincipal);
+}
+
+.text-container {
+    margin-top: -50px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.card-button-green {
+    background-color: var(--colorPrincipal);
+}
+
+/* --------------------------- */

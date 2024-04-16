@@ -1,5 +1,5 @@
 {
-  "superheroes": [
+  "heroes": [
     {
       "id": "robin",
       "nombre": "Dick Grayson",
