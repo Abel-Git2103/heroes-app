@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { PagesRoutingModule } from './pages-routing.module';
 
@@ -12,6 +12,7 @@ import { RecursoInexistenteComponent } from './recurso-inexistente/recurso-inexi
 @NgModule({
     declarations: [LayoutComponent, BusquedaComponent, ListadoComponent, HeroeComponent, RecursoInexistenteComponent],
     imports: [SharedModule, ComponentsModule, PagesRoutingModule],
-    providers: []
+    providers: [],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PagesModule {}

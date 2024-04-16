@@ -7,7 +7,7 @@ import { Heroe } from '../shared/models/heroe.model';
     providedIn: 'root'
 })
 export class HeroesService {
-    private _baseUrl: string = 'https://s182blq6-3000.uks1.devtunnels.ms/superheroes';
+    private _baseUrl: string = 'http://localhost:3000/heroes';
     private _http: HttpClient = inject(HttpClient);
 
     /* Devuelve el listado de héroes */

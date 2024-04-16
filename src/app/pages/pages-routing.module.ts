@@ -6,6 +6,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 import { HeroeComponent } from './heroe/heroe.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ListadoComponent } from './listado/listado.component';
+import { RecursoInexistenteComponent } from './recurso-inexistente/recurso-inexistente.component';
 
 const routes: Routes = [
     {
@@ -40,8 +41,12 @@ const routes: Routes = [
                 data: { mode: Constants.pageHeroMode[0] }
             }, */
             {
+                path: 'recurso-inexistente',
+                component: RecursoInexistenteComponent
+            },
+            {
                 path: '**',
-                redirectTo: 'listado'
+                redirectTo: 'recurso-inexistente'
             }
         ]
     }
