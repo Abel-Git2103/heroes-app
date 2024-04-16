@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RecursoInexistenteComponent } from './shared/recurso-inexistente/recurso-inexistente.component';
+import { RecursoInexistenteComponent } from './pages/recurso-inexistente/recurso-inexistente.component';
 
 const routes: Routes = [
     {

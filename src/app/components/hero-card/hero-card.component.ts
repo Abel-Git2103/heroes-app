@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { Heroe } from 'src/app/shared/models/heroe.model';
 import { DialogoConfirmacionComponent } from '../dialogo-confirmacion/dialogo-confirmacion.component';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-hero-card',

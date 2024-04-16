@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RecursoInexistenteComponent } from './recurso-inexistente/recurso-inexistente.component';
 
 /* Módulos Angular material */
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +23,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { UpperCaseInputDirective } from './directives/upper-case-input.directive';
 
 @NgModule({
-    declarations: [RecursoInexistenteComponent, UpperCaseInputDirective],
+    declarations: [UpperCaseInputDirective],
     exports: [
         CommonModule,
         HttpClientModule,
