@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, map } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Heroe } from '../shared/models/heroe.model';
 
 @Injectable({
     providedIn: 'root'
 })
 export class HeroesService {
-    private _baseUrl: string = 'http://localhost:3000/heroes';
+    private _baseUrl: string = environment.baseUrl;
     private _http: HttpClient = inject(HttpClient);
 
     /* Devuelve el listado de héroes */
