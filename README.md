@@ -1029,6 +1029,78 @@ export class HeroeComponent implements OnInit, AfterContentChecked {
 <img src="./src/assets/img/readme/añadirHeroe.jpg">
 <img src="./src/assets/img/readme/editarHeroe.jpg">
 
+## Página 5 - Recurso inexistente.
+
+`recurso-inexixstente.component.css`
+
+```css
+/* Estilos de página 404 */
+.recurso-inexistente {
+    background: #fff;
+    margin-top: 200px;
+}
+
+.flex-layout-container {
+    justify-content: center;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 80px;
+    color: var(--colorPrincipal);
+}
+
+.text-container {
+    margin-top: -50px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.card-button-green {
+    background-color: var(--colorPrincipal);
+}
+
+/* --------------------------- */
+```
+
+`recurso-inexixstente.component.html`
+
+```html
+<section class="recurso-inexistente" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center">
+    <div
+        class="flex-layout-container"
+        fxFlex="0 1 calc(40% - 15px)"
+        fxFlex.lt-xl="0 1 calc(40% - 15px)"
+        fxFlex.lt-lg="0 1 calc(40% - 15px)"
+        fxFlex.lt-md="0 1 calc(60% - 15px)"
+        fxFlex.lt-sm="100%"
+    >
+        <div class="image-container">
+            <h1 class="text-center">404</h1>
+            <img src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif" alt="Imagen 404" />
+        </div>
+
+        <div class="text-container">
+            <h2>Parece que estás perdido</h2>
+
+            <p>¡La pagina solicitada no existe!</p>
+        </div>
+
+        <button mat-raised-button color="primary" class="card-button-green mt-2" [routerLink]="['/app/listado']">
+            <mat-icon aria-hidden="false" aria-label="Editar héroe" fontIcon="undo"></mat-icon><span>Volver al listado</span>
+        </button>
+    </div>
+</section>
+```
+
+<img src="./src/assets/img/readme/recurso-inexistente.jpg">
+
 ## Elementos compartidos - Carpeta shared
 
 ### Shared Module
