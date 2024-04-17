@@ -20,7 +20,6 @@ export class ListadoComponent implements OnInit {
     /* Inyección de dependencias */
     private _route: ActivatedRoute = inject(ActivatedRoute);
     private _router: Router = inject(Router);
-
     private _heroesService: HeroesService = inject(HeroesService);
     private _snackBar: MatSnackBar = inject(MatSnackBar);
 
