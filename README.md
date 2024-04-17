@@ -2,7 +2,10 @@
 
 Éste proyecto ha sido generado con [Angular CLI](https://github.com/angular/angular-cli) versión 16.2.6.
 
-Para probar los ejemplos de este repositorio, teclea los siguientes comandos:
+Puedes acceder a la demo online del proyecto en ```https://s182blq6-4200.uks1.devtunnels.ms/```
+
+
+Para probar este proyecto de forma local, teclea los siguientes comandos:
 
 1. Clona este repositorio en local:
 
