@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos globales */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap');
+
+:root {
+    --colorPrincipal: #33637e;
+    --colorSecundario: #f4fcfc;
+    --fuenteSecundaria: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.custom-heading-container {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-heading-container h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+}
+
+.custom-heading-container h1::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    width: 50px;
+    height: 7px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: var(--colorPrincipal);
+    border-radius: 15px;
+}
+
+/* --------------------------- */

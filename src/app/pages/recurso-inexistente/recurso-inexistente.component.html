@@ -1,0 +1,25 @@
+<section class="recurso-inexistente" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center">
+    <div
+        class="flex-layout-container"
+        fxFlex="0 1 calc(40% - 15px)"
+        fxFlex.lt-xl="0 1 calc(40% - 15px)"
+        fxFlex.lt-lg="0 1 calc(40% - 15px)"
+        fxFlex.lt-md="0 1 calc(60% - 15px)"
+        fxFlex.lt-sm="100%"
+    >
+        <div class="image-container">
+            <h1 class="text-center">404</h1>
+            <img src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif" alt="Imagen 404" />
+        </div>
+
+        <div class="text-container">
+            <h2>Parece que estás perdido</h2>
+
+            <p>¡La pagina solicitada no existe!</p>
+        </div>
+
+        <button mat-raised-button color="primary" class="card-button-green mt-2" [routerLink]="['/app/listado']">
+            <mat-icon aria-hidden="false" aria-label="Editar héroe" fontIcon="undo"></mat-icon><span>Volver al listado</span>
+        </button>
+    </div>
+</section>

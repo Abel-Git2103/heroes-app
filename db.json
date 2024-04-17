@@ -1,0 +1,219 @@
+{
+  "heroes": [
+    {
+      "id": "robin",
+      "nombre": "Dick Grayson",
+      "alias": "Robin",
+      "imagen": "assets/img/heroes/dc-robin.jpg",
+      "poderes": [
+        "Acróbata",
+        "Cuerpo a cuerpo",
+        "Estratega"
+      ],
+      "historia": "Dick era un joven acróbata de circo cuyos padres fueron asesinados por un gánster, y fue adoptado por Bruce Wayne, quien secretamente era Batman. Bruce entrenó a Dick para convertirse en su compañero en la lucha contra el crimen."
+    },
+    {
+      "id": "arrow",
+      "nombre": "Oliver queen",
+      "alias": "Arrow",
+      "historia": "Es un multimillonario playboy que, tras un naufragio, queda varado en una isla desierta durante varios años. Durante ese tiempo, aprende habilidades de supervivencia y combate, transformándose en un hábil arquero.",
+      "poderes": [
+        "Arquero",
+        "Cuerpo a cuerpo",
+        "Estratega"
+      ],
+      "imagen": "assets/img/heroes/dc-arrow.jpg"
+    },
+    {
+      "id": "wonder-woman",
+      "nombre": "Diana prince",
+      "alias": "Wonder woman",
+      "historia": "Es una princesa amazona de la isla de Themyscira. Criada en un paraíso oculto habitado exclusivamente por mujeres guerreras, Diana se convierte en una formidable combatiente y defensora de la paz y la justicia.",
+      "poderes": [
+        "Fuerza",
+        "Velocidad",
+        "Resistencia"
+      ],
+      "imagen": "assets/img/heroes/dc-wonder.jpg"
+    },
+    {
+      "id": "black-canary",
+      "nombre": "Dinah Laurel Lance",
+      "alias": "Black Canary",
+      "imagen": "assets/img/heroes/dc-black.jpg",
+      "poderes": [
+        "Fuerza",
+        "Sentidos",
+        "Traje de Vibranium"
+      ],
+      "historia": "Es la hija de Dinah Drake, la primera Black Canary, y hereda tanto su legado como sus habilidades como luchadora y su famoso \"Grito del Canario\". A lo largo de su historia, Dinah se ha destacado como una experta en artes marciales y una justiciera consumada."
+    },
+    {
+      "id": "batman",
+      "nombre": "Bruce wayne",
+      "alias": "Batman",
+      "historia": "Es un niño que presencia el asesinato de sus padres, Thomas y Martha Wayne, en un oscuro callejón de Ciudad Gótica. Este evento traumático lo impulsa a jurar venganza contra el crimen y a dedicar su vida a combatir la injusticia.",
+      "poderes": [
+        "Inteligencia",
+        "Cuerpo a cuerpo",
+        "Tecnología"
+      ],
+      "imagen": "assets/img/heroes/dc-batman.jpg"
+    },
+    {
+      "id": "blue-beetle",
+      "nombre": "Ted Kord",
+      "alias": "Blue Beetle",
+      "imagen": "assets/img/heroes/dc-blue.jpg",
+      "poderes": [
+        "Traje alienígena",
+        "Armas energéticas",
+        "Tecnología alienígena"
+      ],
+      "historia": "Es un genio inventor y empresario que, tras la muerte de su mentor, adquiere el manto de Blue Beetle. Aunque no tiene superpoderes, utiliza un traje especial y una variedad de gadgets tecnológicos para luchar contra el crimen."
+    },
+    {
+      "id": "flash",
+      "nombre": "Barry Allen",
+      "alias": "Flash",
+      "imagen": "assets/img/heroes/dc-flash.jpg",
+      "poderes": [
+        "Super velocidad",
+        "Viajar en el tiempo",
+        "Vibración molecular"
+      ],
+      "historia": "Es un científico forense del Departamento de Policía de Ciudad Central. Durante una tormenta, es alcanzado por un rayo y bañado en productos químicos, lo que le otorga la capacidad de correr a velocidades increíbles."
+    },
+    {
+      "id": "green-lantern",
+      "nombre": "Hal jordan",
+      "alias": "Green lantern",
+      "historia": "Es un piloto de pruebas audaz y valiente que es reclutado por un alienígena moribundo llamado Abin Sur para convertirse en el protector del sector 2814 del universo.",
+      "poderes": [
+        "Construcciones de luz",
+        "Vuelo",
+        "Manipulación de energía"
+      ],
+      "imagen": "assets/img/heroes/dc-green.jpg"
+    },
+    {
+      "id": "martian-manhunter",
+      "nombre": "John James",
+      "alias": "Martian Manhunter",
+      "imagen": "assets/img/heroes/dc-martian.jpg",
+      "poderes": [
+        "Telepatía",
+        "Cambio de forma",
+        "Fuerza"
+      ],
+      "historia": "Es un ser alienígena proveniente del planeta Marte, donde poseía habilidades telepáticas y una forma física cambiable. Tras la destrucción de su planeta, J'onn llega a la Tierra y asume la identidad de John Jones, un detective marciano."
+    },
+    {
+      "id": "superman",
+      "nombre": "Clark Kent",
+      "alias": "Superman",
+      "imagen": "assets/img/heroes/dc-superman.jpg",
+      "poderes": [
+        "Fuerza",
+        "Vuelo",
+        "Rayos X"
+      ],
+      "historia": "La historia comienza en el lejano planeta Krypton, donde nace como Kal-El, hijo de Jor-El y Lara Lor-Van. Ante la inminente destrucción de su mundo, sus padres lo envían a la Tierra en una nave espacial para salvarlo."
+    },
+    {
+      "id": "captain-america",
+      "nombre": "Steve Rogers",
+      "alias": "Capitán américa",
+      "imagen": "assets/img/heroes/marvel-captain.jpg",
+      "poderes": [
+        "Fuerza",
+        "Cuerpo a cuerpo",
+        "Escudo indestructible"
+      ],
+      "historia": "Es un joven débil y frágil que se ofrece como voluntario para un experimento científico durante la Segunda Guerra Mundial. Este experimento, conocido como el Suero del Súper Soldado, transforma a Rogers en un ser humano físicamente perfecto, con fuerza, velocidad y resistencia sobrehumanas."
+    },
+    {
+      "id": "cyclops",
+      "nombre": "Scott Summers",
+      "alias": "Cyclops",
+      "imagen": "assets/img/heroes/marvel-cyclops.jpg",
+      "poderes": [
+        "Rayos ópticos",
+        "Control de intensidad",
+        "Visión enfocada"
+      ],
+      "historia": "Es un mutante que descubre sus habilidades cuando era adolescente. Scott tiene la capacidad de emitir rayos de energía óptica desde sus ojos, un poder que no puede controlar sin la ayuda de un visor especial o gafas de rubí cuarzo. Esto se debe a una lesión traumática en su infancia que dañó su capacidad de controlar sus rayos de energía."
+    },
+    {
+      "id": "daredevil",
+      "nombre": "Matt Murdock",
+      "alias": "Daredevil",
+      "imagen": "assets/img/heroes/marvel-daredevil.jpg",
+      "poderes": [
+        "Sentidos mejorados",
+        "Reflejos mejorados",
+        "Radar humano"
+      ],
+      "historia": "Es un joven que queda ciego tras ser expuesto a productos químicos radioactivos mientras salva a un anciano de ser atropellado por un camión. A pesar de su ceguera, sus otros sentidos se ven ampliamente mejorados, otorgándole habilidades sobrehumanas."
+    },
+    {
+      "id": "wolverine",
+      "nombre": "James Howlett",
+      "alias": "Wolverine",
+      "imagen": "assets/img/heroes/marvel-wolverine.jpg",
+      "poderes": [
+        "Regeneración acelerada",
+        "Esqueleto de adamantium",
+        "Garras"
+      ],
+      "historia": "Logan experimentó una serie de eventos traumáticos en su vida temprana, lo que llevó a la manifestación de sus poderes mutantes. Entre estos poderes destacan su habilidad de regeneración acelerada, que le permite curarse de heridas mortales en cuestión de minutos, y su esqueleto recubierto de adamantium, un metal indestructible, junto con sus icónicas garras retráctiles de adamantium que emergen de sus nudillos."
+    },
+    {
+      "id": "iron-man",
+      "nombre": "Tony Stark",
+      "alias": "Iron Man",
+      "imagen": "assets/img/heroes/marvel-iron.jpg",
+      "poderes": [
+        "Armadura",
+        "Inteligencia",
+        "Tecnología"
+      ],
+      "historia": "Es un brillante inventor y empresario multimillonario que hereda el imperio Stark Industries. Durante una visita a Afganistán para demostrar un arma de su propia creación, es secuestrado por terroristas que lo obligan a construir armas para ellos."
+    },
+    {
+      "id": "-voldemort",
+      "nombre": "Probando",
+      "alias": "Voldemort",
+      "historia": "Volvemort era el malo de harry potter",
+      "poderes": [
+        "Magia oscura",
+        "Loco",
+        "Nds"
+      ],
+      "imagen": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PEBAQEA8QDw8PEA8PDw0NDw8NDw4NFREXFhURFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OFxAQFyslHR0tLS0tKy0tLS0tLSstLS0rKystLS0tLS0tLSsrKy0tLS0tLS0rLS0tKy0tLS4tKy0rLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwABBAUGB//EADwQAAIBAgQEAwUFBgYDAAAAAAABAgMRBBIhMQVBUWEicYEGE5GhsTJCYsHwFCMzUnLRFkOCkrLhJFPx/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDAAQF/8QAIxEBAQACAgICAwADAAAAAAAAAAECEQMhEjFBUQQiYTIzcf/aAAwDAQACEQMRAD8A+HEIQILIQtAZEiyFhCoWQtIJdpYuxaRdghtVi7BWLsYNgsXYOxLGDYLEsHYljBsuxVhlimjDstoqwyxTRjbLsQJopoAgaIEU0YwCBAiiohZQWQhCGZCykWZkCKQSMCItELQS1aLSIkGkEtqkgki0gkjFtUkWkEkEkEtoLF5RmUmUJfIvKVYblJlM3kTYqw5xBaAMyKaBaGtAtGNKU0C0NaAaAeUDRQTQLAaBZTCKBTQJRbIAVEIQLLIiFoDLCKRaGLVoJIpBpBLaiQaREg0gktRIJItIYkFO0KiGkWonRwHDXO0paR5dZeXYOizeV1HPjBvZX7JXZphw6q9oP10+p6jBYCMVokvr8TcsJ2Btefj/AHXiZ8Oqx3g/Sz+hmcLHu6mFObjcAp7pdnz+JpWy/H+q8o0U4nRxnD5U9d49Vy8zE4hc93LqkOIDQ9oCUQGlJaAaGtANAUlKaBYxoBgPKBlMJlAPAMoJgsBkIQgGQIpFoLLCRSCQSVaQaRSDiElokg4oqKGxQyWVWkGokijXgcK6s4wXPd9I82GJWtPCeHuo8zXgi/8AdLoemo0BbyQjGENIxTSXV9Tbg03Z9TZV28HHqNOGoJGuNC5dCKN1KVlt6krXTpzqmEMGIwx6GSb6GPFUNdtvqaUdPOSopbq62afNHnuMcN9344fw29v5H08j2OJo6Psc+y1jJXjJWcX0Hxrn5+OZT+vEyQDR0OJ4T3VRxWsXrF/hMUkO4JfgiSFSRoaFSQqmNJkgGNaFyQqspbBYbBYFIFgsJlApoEhCGFaCRQRoFWgkCg0MSiihiBig4oMTtHFDYoGKGxQ0Ryooo73AqeWEp21lJQT6LmcSKPS4KCjh6f4rv57hHgnlmKOs0v1ZHe4PC8b8uS78zg0KlpSlb7rjHzfM7/BYSUEiWVenhO3UhHyXmbqNDMt7+Qqlhs1vn5myaVJK+zJ2qaCsNHndf64r8zFisMl9mTXm018h9evTmtJWbcUtezf5CJcOnynftc0oWOXi6dk7630Vjh1JandxuGlG93b1OBi6dm+bvdJXKSkyYuP0lKCkvu2+D0POyR6ios1Konuov1PNSRWdx5fPPHNnkhckPkhUkChjSJIXIdJCmLVpSmgWHIBgUgQWEwWCniEKLAKIIFBIMCiQaAQcQkpkRkUAhkAxLI2KGxQuKOnwnBe8zScXJQy+FO2aUnor+SY29JTG5WSfLLFHq4UW6GHS5xWvbW5kx3CIOh+0UItRhLJVg224St9B8q1R4ajFVFThlac0rys2LcpY6OHiyw5NUivjYRkkvsw27vqbKPtKoqysrHlKtCWZpy65ZPRMfTwdOV83vVHTWLfw8OhKdu//ABnUenn7aOOikhP+Ja2InGEZXu0uyPOV3RTahDsou/TVv9bnovY7BKVaDUfDbNdrSVtL/X4C3o0tvtq48q1CnCet7po5dP2trdZK3W59E9vMHF0I9lF6K+ier8rXPmE6kadSUalKOmkr7S6O/LRmx7bLeunQ/wAUuf2ndEqcSjU1T1OVVp0U01CMI2slmUW/Kzu33MFSOvgfnyv3Y169Fnc7mnrqkoypOcd8slJd7HlZI62AnUVOpmtlcLvqmauG8Jpe5deupyi5KFOnTdpTm1tcrjnJO3n8/DllnJi8zJCpI7XFeHpQVanCUKeZ05wlJzdOfK77r6HGkNLvtC4XDLxpExTHzEyApiVIBjJC2KrAMphMFgUiiEIAVotFItBCjiHECIyISUcR0BMR0BkcjYnt/Y/DRyUV/wC2rOUuyhaKX1+J4mB7L2WqvJQtynXT7aRf5gz9Dwf7HdwiUJ4nDSXgrpyg+WdLb1X0PM4Wi5x92/8AKqSj6bm/idWbxNOEbuonTUYrnNvRfMOrhvd1sVDaUJQkl/uTJR6Oesbtx8fw5yk7p9vIw1ODttWue8wLhVim0m1vsa4cPjJ8vKxhtfPcPwSTa5Ju13vbmz6D7LYDLPolGEEukUZ8ZRhSfkjT7PY/xyi/vQUo98s5KX/KHxFp49b7QYdTopP+Wz8j5lxPhaqbLVL6cme/45xLLQm392Dfdu1kvV2PMvwS8ezbUvO+4J01nTyMuEwa0puMua0s/l8w8PwNvVp2+aPotLBU2k7JrfqZOKKnTg8i1eg+yevb55irxgob55qPmk/+j0/C4+9q4agrKlh7SqPrUau/kcitCM8VRgtYwTbfWWrv8R/sjUl+1zozfjm6tNtP772aNWnc26/F+HacRpLZ0ViIdNGpX+R8xkfSOOcTnHD4rMstWNGng533bdSS/wCFz5vMpx+nn/k395/wmQqQ6QmQ1TxLkLYyQtirQDBYTBYDxRCENoy0WikWjBRxGRFxDiElNQ2ImI6AyOR0D1PsPioxquEldfbiu6+0vh9DysDVha0qcozi7Si00+4bNxOZeOUr2/HuD4ynjf2qjSdWjGpGtCdNqXh0dmt7mDiWPc8S6zVnP7UXdNa7NHZwOPdSlGdGuotrxU5SyuEucb/3OJxtSzwlOzm8ybTTvoQnV09bczx8o04DFe7nps/oetwVWLV10+bPA05Wsz03B6/h33BWxZ+O13KplXmzqcMwfhpyWkoSupbpxlZTg+zXzSONKOerKW95ZV6bnteCxioxTtacU152BTS9geCVXLnby06kajja+dxu4xfbNZ+hzuL0NJd1c7X7VGMZt2TvaN9NTh47ilCUpx95BvLlSutWCHsthfs7xC6dOV7x25aGLj+NvLKtUvjcwRre7qxmtpXT/X63E1P3lRtvRJvUadVO9xhpqXv/AALNJRSSbsr92dvgns3UoV443E16VOCn75wi25ykndRWljhU8RCFVucsqa3W+72NGP43h4wtRjUq1GrOtXlmUf6Y7Bu7eg8sccd2p7b8QVTbevVlXmlyio5YJ+jZ4+ZqxNZzd5O77mWRbGajyuTOZ52z0VITIbIVI1NiXIWxkhbFWgGCwmCwKRRCEBsVotAoJBgUaDiLQcQkpsRsGJiNgFLI+I2AmI2LHQyaaU2tm15No1YeblOGZt+JLV30bMUGOhIOpUvPLH1Xeo0NZQe6bR0MHPJHvsvMz8RkozhVX2asIzv3a1E4jF5NV0zLztoc+U1XtYZ7koqvFo4eUXZScXLMm7JSf1fY04b2mqyVNQhUm4Pw5VZSj0Z42E89VX8ST57Nvd/E9NwaS/cZ6clHNKLlCUVmeksrs0/0yWWWnTx6l7N4hj8ZXzWhkVOWaV9ZJtO2/qeRxOIrReu7Wa8luuuvI+g4/HUZOt/41VU55aVOUpxbjVi7SbTne3d9zw/F6NV7rZZU43acVobHLZ+S9frt0eDcS95TcZfaj4lf5/I9BSS93J9dDwfB5ONSz6NNdnp+Z7fDybhFdSjn37rh8W0ml+BfVnNmzocal++mltG0V6JL+5zZM6vh4Od3naXNiZjJMVJi1TGFzEyGTYpir4gkLYcgGKrAsFlspgUiiEIAUQQJYYFGg0LQaCWmRGRYqIyLDEqfFjYsRFjYsaI5Q+LGxZnixsWNEco9U5RnRpUpO16cJU5PlK2q9TnY2lJ07W1j4X5cvzKxivRovpBBcL4jF/u62zWXO/lf+5LL29Li3MJYw8M4VXnJZabd3du2nxZ7LhfBqdNXqyjprlnJtX56L+5yP22rS8KtJPZ7P/sdheG18TLxzyQ59X5ErPt3Yct1+rtSnhlJy9/BfhjSpyirdpNmHFU8M22q2/SnFL4LQ6S9hqDp3VV5+8tTyXFOCVKLdm5Jc0aSGvPyfbZTwVKU75s6Vr2Sinz5bmnCWUpSekKMJTfotEcfh8pw5avRX7j+JY1RoyhF3zNRnNbN7tLtoUxxcP5HLZLXDrVHJtveTbfm2IkwpMVJlq8rGBkxUmFJi5MWr4wuTFsOTFyFq2MBIBhMBgUimCwgQU8QhVyAFEEgUWjRqJBoAJBLTIhpikMiwp2HRYxMRFjYsZLKHxYyLM6YxMZKx26dVSp00tbLL6phV+HvLexzKknScJbRqJZvw1Vp8z1/DGq1NLqiWXt6PDZcJp5qhxCdJqMlmiuT3t2Z16PtCm9G0uXIy8YwGV7HClTFqs6e2j7RW+98zNV9pYJtys7clrc8hlYUKLZpGuToY3i8q0rQjki97faf9i+JrIqdP+WOZ/1S/wCkviLwVKMZZpOyjq30SM+MxPvZyna2Z6J7qNrL5WK4uL8n1IVJi5MuQtsZzSKkxUmFJipMVXGKbFsKTAYqsgWCy2CwKRTKLYLBTRRCEMKBAlozCCQKLQS0aYaYtBJhJYamHFikw0wp2HRZv4ZRUpOUv4dNZ59+kfVnNTOxxWP7Nh40v8ypapU6q+0fRDT7Sym7MZ7rFVxOeDT1zTqX9ZXRu9meNe4nkqP923pL+Xz7HnYz0a73GvVdyWV27MJ4en1XiGGjVgpR1TV7o8djMPaTXcH2Z9p3R/c1ruk9pbypP84/NHSx7jOWeLUlLWMou6a5O4ItLtxfctGrDUNG+Rr90nYXxOvGlFQWkpK7fRBgW6YJPPUVNfZXiqP8K1y+oukk467yd/Pt+uwn9pVON/vVHbyhfX4h46jKns26bd1rz6PuWx1Hn8tueX8+B4yirOS2jaNlq09lforI58pB1MRJpLppdKza79dl8BDZsrLegwxsnapMBstsBsRWRTYDZbYLApIplEZTAeKBZbKAZCEIBkIiizMIsFBJhgUSLTBLTCWmJhR/SXUXH432S1dz13B+HwwkffVknXteFN2ao/if4voNjNo8ucwn9+icNgFhIRq1kvfyt7uk9fd35y/F9Di8XxbrVHJvTZDOKcQlWqubd7Xt59TAldruwZZfEbi49ftl7VOnYKDNGJjaTMzVmIvLuKqx5o08N4jKm7N+BvxR6fiQkz1I66czGxr18sdGnFyevTueYxWMlVqOTb1YNScmo073UVr/AGJClqjDlRVpNq79Ds4PEqcEpapqzTONiHy6A0K7g+3QaZaqOWHli6eLwTj4oeKPzRz2zpUcZp2FYmnCWq0fyY3tKSzqsDYLZc01uLbArIjBZbKAZRRGU2AymQhRhQhCGZCyiGZYQJEBhofg8LUrSyU4uUvgorq3yQzBYCVTxSeSnzm+fkuZ1Vjo017uiskF9p/em+snzHn9SzyvrH26eD4dRwUc8mquItpL7lL+lde5w+JcQlNvV92BjMfKel9DElc2WXxE+Pj1+2XdRIOC8S8xtKlZZnsvqLpK7FWa8bHW5nqwvG65G6sr27oyuOW6foAuN6Y4TKcra83pHt3LrQ5lUld36GUFThbzNNNby5L6gKPLmwq72gtvzMW9s0tfUpQu7ddh0Kd3YJQ8ObnFp+hh2RCbi7P/AODVUCxdO6U16meD5Gb2a3cVOASZbC2iCmxk4ijbFASEAKFEIFkIQhmQhCGZZCEMz0nEf4cP6V9DlciEGy9ocfoljKXMogqjdU/h+hkw2/qiEMEdGe6E4vkQgCxgxOxeH2IQyvwfR+16Ar7ZZDFMwm78iUvsVCEMHylP+F/pOeQhjQQxkIYaFmepuWQLAIQgBUQhAshCEML/2Q=="
+    },
+    {
+      "id": "senior-dev",
+      "nombre": "Abel",
+      "alias": "Senior dev",
+      "historia": "En los relucientes y altos edificios de T-Systems, una empresa líder en tecnología, se esconde un héroe poco convencional: ¡el Programador Prodigioso!\n\nEn su vida diaria, lleva una doble identidad: Abel Programador durante el día, un humilde desarrollador de software en T-Systems, y por la noche, ¡el legendario Programador Prodigioso!\n\nUn día, mientras intentaba corregir un error en el código de un software vital para la empresa, Abel fue alcanzado por un rayo misterioso que surgió de su monitor. En lugar de dañarlo, este rayo le otorgó habilidades informáticas sobrehumanas. Desde ese momento, Abel se transformó en el Programador Prodigioso, el guardián digital de la ciudad.\n\nArmado con un teclado y un ratón como sus armas principales, el Programador Prodigioso lucha contra el crimen cibernético y las amenazas digitales que acechan a T-Systems y a la ciudad en general. Con sus habilidades de codificación de nivel superhumano, puede hackear sistemas en un abrir y cerrar de ojos, neutralizando virus informáticos y deteniendo hackers malintencionados.\n\nPero la vida de un superhéroe no es fácil. Además de enfrentarse a enemigos digitales, el Programador Prodigioso también debe lidiar con problemas mundanos en la oficina, como juntas interminables, correos electrónicos de spam y actualizaciones de software inoportunas.\n\nA pesar de los desafíos, el Programador Prodigioso nunca pierde su buen humor y su ingenio. Sus compañeros de trabajo lo admiran por su dedicación tanto en la oficina como en su rol de superhéroe. Y aunque su superpoder puede no ser tan visible como volar o tener fuerza sobrehumana, su capacidad para salvar el día con solo unas pocas líneas de código es igualmente impresionante.\n\nAsí que la próxima vez que te encuentres en apuros tecnológicos, ¡no temas! El Programador Prodigioso está en camino para salvar el día, una línea de código a la vez.",
+      "poderes": [
+        "Teclado",
+        "Monitor"
+      ],
+      "imagen": "https://img.freepik.com/fotos-premium/codigo-superheroe-rodeado-aura-binaria-brillante_1003030-12094.jpg?w=1060"
+    },
+    {
+      "id": "hércules",
+      "nombre": "Heracles",
+      "alias": "Hércules",
+      "historia": "Es un personaje legendario de la mitología griega y uno de los héroes más famosos de la antigüedad. Según las leyendas, es hijo de Zeus, el rey de los dioses, y de Alcmena, una mortal. Nació en Tebas y desde su infancia demostró una fuerza sobrehumana y valor incomparable.",
+      "poderes": [
+        "Fuerza",
+        "Agilidad",
+        "Inteligencia"
+      ],
+      "imagen": "data:image/jpeg;base64,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"
+    }
+  ]
+}

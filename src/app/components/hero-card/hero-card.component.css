@@ -1,0 +1,63 @@
+/* Estilos de las tarjetas */
+mat-card {
+    margin-bottom: 40px;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.card-container:hover {
+    transform: translateY(-9px);
+}
+
+.card-subtitle {
+    color: var(--colorPrincipal);
+}
+
+.card-image {
+    display: block;
+    padding: 0 16px;
+    max-width: 100%;
+    max-height: 700px;
+}
+
+.powers-container {
+    max-width: 100%;
+    display: block;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.power-item {
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 3px 5px;
+    font-size: 10px;
+    line-height: 10px;
+    vertical-align: top;
+}
+
+mat-card-content {
+    text-align: justify;
+    height: 100%;
+}
+
+.card-divider {
+    background-color: var(--colorPrincipal);
+}
+
+mat-card-actions {
+    display: block;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-button-green {
+    background-color: var(--colorPrincipal);
+}
+
+/* --------------------------- */

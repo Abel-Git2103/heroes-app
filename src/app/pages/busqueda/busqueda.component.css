@@ -1,0 +1,24 @@
+/* Estilos del buscador */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-full-width {
+    width: 100%;
+}
+
+.results-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* --------------------------- */

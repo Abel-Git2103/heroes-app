@@ -1,0 +1,46 @@
+/* Estilos de los templates */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-column {
+    padding: 20px;
+    border: 1px solid var(--colorPrincipal);
+    height: fit-content;
+}
+
+.card-column-image {
+    padding: 20px;
+    border: 1px solid var(--colorPrincipal);
+    width: 100%;
+    max-width: 500px;
+    height: 650px;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+}
+
+.form-container {
+    height: fit-content;
+}
+
+.mat-text-area {
+    max-height: 70px;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-button-green {
+    background-color: var(--colorPrincipal);
+}
+
+/* --------------------------- */
